@@ -43,6 +43,8 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-6050778288129844879-8123205510754703199
         - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-5226102647784351887-8112050695339659683
         - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-8706730481147312939-1232547083723305880
+        - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-5601310330118351209-3434043406410470698
+        - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-6572786193439545596-3067450718647148681
         values:
         - colorIndex: 2
           iconNameOrGuid: Camera Icon
@@ -79,6 +81,10 @@ MonoBehaviour:
         - colorIndex: 4
           iconNameOrGuid: 
         - colorIndex: 1
+          iconNameOrGuid: 
+        - colorIndex: 3
+          iconNameOrGuid: 
+        - colorIndex: 3
           iconNameOrGuid: 
         - colorIndex: 3
           iconNameOrGuid: 
