@@ -7,24 +7,25 @@ public class Spawnguest : MonoBehaviour
   public GameObject[] guests;
   private GameObject[] spawnPoints;
   public int scoreguests = 1;
-
-  public float spawnInterval = 3f;  // Задержка между спавном гостей
-  private float lastSpawnTime;
+  private int numfloor = 0;
 
   void Start()
   {
-    spawnPoints =GameObject.FindGameObjectsWithTag("SpawnPoint");
-  }
-  void Update()
-  {
-    if (Time.time - lastSpawnTime >= spawnInterval)
+      spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+    for (int i = 0; i < scoreguests; i++)
     {
-      SpawnGuests();
-      lastSpawnTime = Time.time;
+        int rand = Random.Range(0, guests.Length);
+        Instantiate(guests[rand], spawnPoints[numfloor].transform.position, Quaternion.identity);
     }
   }
-  void SpawnGuests()
+  public void SpawnGuests()
   {
-      
+      spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+      numfloor++;
+      for (int i = 0; i < scoreguests; i++)
+      {
+          int rand = Random.Range(0, guests.Length);
+          Instantiate(guests[rand], spawnPoints[numfloor].transform.position, Quaternion.identity);
+      }
   }
 }

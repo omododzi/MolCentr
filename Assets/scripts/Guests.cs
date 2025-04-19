@@ -4,20 +4,35 @@ using UnityEngine.AI;
 public class Guests : MonoBehaviour
 {
     private NavMeshAgent agent;
-    public GameObject[] magazine;
+    public GameObject[] magazinepoints;
+    private bool goinmagaz = false;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        magazine = GameObject.FindGameObjectsWithTag("magazine");
+        magazinepoints = GameObject.FindGameObjectsWithTag("magazine");
     }
 
     void Update()
     {
-        if (magazine != null)
+        if (magazinepoints != null)
         {
-            int n = Random.Range(0,magazine.Length);
-            agent.SetDestination(magazine[n].transform.position);
+            if (!goinmagaz)
+            {
+                Gomagaz();
+            }
+
+            if (agent.remainingDistance <= agent.stoppingDistance)
+            {
+                goinmagaz = false;
+            }
         }
+    }
+
+    void Gomagaz()
+    {
+        goinmagaz = true;
+        int n = Random.Range(0,magazinepoints.Length);
+        agent.SetDestination(magazinepoints[n].transform.position);
     }
 }
