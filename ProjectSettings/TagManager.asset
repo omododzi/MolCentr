@@ -6,6 +6,17 @@ TagManager:
   tags:
   - SpawnPoint
   - SpawnTilet
+  - spawn money
+  - spawn chess
+  - spawn pomoyka
+  - spawn skameyka
+  - spawn fountain
+  - spawn cactus
+  - spawn jewelery
+  - spawn baker
+  - spawn fish
+  - spawn pet shop
+  - spawn sport
   layers:
   - Default
   - TransparentFX
