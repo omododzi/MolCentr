@@ -7,8 +7,8 @@ using TMPro;
 public class ButtontoBY : MonoBehaviour
 {
     
-    public List<GameObject> CubeorDecor;
-    public GameObject[] buttons;
+    public List<GameObject> magazinetype;
+    public GameObject[] ButtonsOrDecor;
     public GameObject floor;
     public GameObject spawnfloor;
     private Spawnguest _spawn;
@@ -34,19 +34,19 @@ public class ButtontoBY : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (CubeorDecor != null)
+            if (magazinetype != null)
             {
-                for (int i = 0; i < CubeorDecor.Count; i++)
+                for (int i = 0; i < magazinetype.Count; i++)
                 {
-                    CubeorDecor[i].SetActive(true);
+                    magazinetype[i].SetActive(true);
                    
                 }
             }
-            if (buttons != null)
+            if (ButtonsOrDecor != null)
             {
-                for (int i = 0; i < buttons.Length; i++)
+                for (int i = 0; i < ButtonsOrDecor.Length; i++)
                 {
-                    buttons[i].SetActive(true);
+                    ButtonsOrDecor[i].SetActive(true);
                 }
             }
 

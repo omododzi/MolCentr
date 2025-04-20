@@ -20143,6 +20143,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pirate
       objectReference: {fileID: 0}
+    - target: {fileID: 8706730481147312939, guid: 19636bfb38b11d4469de10acfb62ac9a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7931903743108096240, guid: 19636bfb38b11d4469de10acfb62ac9a, type: 3}
@@ -20165,6 +20169,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2828905507130767052, guid: c5e562b05794fc242ab7fb68df80f5fd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3839246296759878825, guid: c5e562b05794fc242ab7fb68df80f5fd, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
