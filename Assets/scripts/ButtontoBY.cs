@@ -1,10 +1,13 @@
-using System;
+using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 using TMPro;
 
+
 public class ButtontoBY : MonoBehaviour
 {
-    public GameObject[] CubeorDecor;
+    
+    public List<GameObject> CubeorDecor;
     public GameObject[] buttons;
     public GameObject floor;
     public GameObject spawnfloor;
@@ -14,6 +17,8 @@ public class ButtontoBY : MonoBehaviour
 
     public GameObject Preftospawn;
     public GameObject Cube;
+    
+    public GameObject[] Visitmagazine;
 
     void Start()
     {
@@ -31,9 +36,10 @@ public class ButtontoBY : MonoBehaviour
         {
             if (CubeorDecor != null)
             {
-                for (int i = 0; i < CubeorDecor.Length; i++)
+                for (int i = 0; i < CubeorDecor.Count; i++)
                 {
                     CubeorDecor[i].SetActive(true);
+                   
                 }
             }
             if (buttons != null)
@@ -53,6 +59,14 @@ public class ButtontoBY : MonoBehaviour
             if (Cube != null && Preftospawn != null)
             {
                 Instantiate(Preftospawn,Cube.transform.position,Quaternion.identity);
+                Destroy(Cube);
+            }
+            if (Visitmagazine != null)
+            {
+                for (int i = 0; i < Visitmagazine.Length; i++)
+                {
+                    Visitmagazine[i].SetActive(true);
+                }
             }
             Destroy(gameObject);
         }
