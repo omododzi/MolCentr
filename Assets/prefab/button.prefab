@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 680477930230363966}
   - component: {fileID: 3780121896553693461}
   - component: {fileID: 5111158299878314688}
+  - component: {fileID: 1296153075785385489}
   m_Layer: 0
   m_Name: button
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.5769682, y: 1.9853771, z: -122.46945}
-  m_LocalScale: {x: 3.5881805, y: 0.64265, z: 3.567347}
+  m_LocalScale: {x: 2.0418544, y: 0.64265, z: 2.5531201}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -108,3 +109,24 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1296153075785385489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6907354790006150772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33dfb41fb4dd9ee40981dc955ed5b829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CubeorDecor: []
+  buttons: []
+  floor: {fileID: 0}
+  spawnfloor: {fileID: 0}
+  text: {fileID: 0}
+  summBY: 0
+  Preftospawn: {fileID: 0}
+  Cube: {fileID: 0}
+  Visitmagazine: []
