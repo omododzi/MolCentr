@@ -17,6 +17,7 @@ TagManager:
   - spawn fish
   - spawn pet shop
   - spawn sport
+  - magazine
   layers:
   - Default
   - TransparentFX

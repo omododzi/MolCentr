@@ -1652,6 +1652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8628162677278332196}
   - component: {fileID: 2041483497750148643}
+  - component: {fileID: 7804741690440395193}
   m_Layer: 0
   m_Name: MP_Male_A1F Man
   m_TagString: Untagged
@@ -1703,6 +1704,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7804741690440395193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3626430853438140692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cbcd7f309921f24294b6a335b733af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magazinepoints: []
 --- !u!1 &3932321172572372117
 GameObject:
   m_ObjectHideFlags: 0

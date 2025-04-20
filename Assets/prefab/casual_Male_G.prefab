@@ -295,6 +295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2432951745126114809}
   - component: {fileID: 247431184029640415}
+  - component: {fileID: 7077236910442718877}
   m_Layer: 0
   m_Name: casual_Male_G
   m_TagString: Untagged
@@ -341,6 +342,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7077236910442718877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016036634914480474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cbcd7f309921f24294b6a335b733af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magazinepoints: []
 --- !u!1 &2482695020990730004
 GameObject:
   m_ObjectHideFlags: 0

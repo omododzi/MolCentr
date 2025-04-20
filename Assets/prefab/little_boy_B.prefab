@@ -607,6 +607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 484555855186382175}
   - component: {fileID: 1472876895604514150}
+  - component: {fileID: -8999329521678595785}
   m_Layer: 0
   m_Name: little_boy_B
   m_TagString: Untagged
@@ -654,6 +655,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-8999329521678595785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5444639423692664270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cbcd7f309921f24294b6a335b733af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magazinepoints: []
 --- !u!1 &5634478321010793034
 GameObject:
   m_ObjectHideFlags: 0
