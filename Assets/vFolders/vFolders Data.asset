@@ -24,6 +24,7 @@ MonoBehaviour:
     - 709f11a7f3c4041caa4ef136ea32d874
     - f54d1bd14bd3ca042bd867b519fee8cc
     - ea221b505c7389344b72bd6347e3eb37
+    - 5e37b901b59c11a4496179e7b0d3f7fb
     values:
     - colorIndex: 1
       iconNameOrGuid: AnimationClip Icon
@@ -45,3 +46,5 @@ MonoBehaviour:
       iconNameOrGuid: Font Icon
     - colorIndex: 9
       iconNameOrGuid: Material Icon
+    - colorIndex: 0
+      iconNameOrGuid: Prefab Icon
