@@ -18,6 +18,7 @@ TagManager:
   - spawn pet shop
   - spawn sport
   - magazine
+  - Button
   layers:
   - Default
   - TransparentFX

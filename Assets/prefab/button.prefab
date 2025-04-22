@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1296153075785385489}
   m_Layer: 0
   m_Name: button
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,8 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33dfb41fb4dd9ee40981dc955ed5b829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CubeorDecor: []
-  buttons: []
+  magazinetype: []
+  ButtonsOrDecor: []
   floor: {fileID: 0}
   spawnfloor: {fileID: 0}
   text: {fileID: 0}

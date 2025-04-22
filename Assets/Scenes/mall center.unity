@@ -911,7 +911,7 @@ PrefabInstance:
     - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
       propertyPath: Preftospawn
       value: 
-      objectReference: {fileID: 5601310330118351209, guid: 753a4742d6f86fa449bace0b99e54144, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
       propertyPath: magazinetype.Array.size
       value: 2
@@ -1196,9 +1196,13 @@ PrefabInstance:
     - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
       propertyPath: Preftospawn
       value: 
-      objectReference: {fileID: 576777898982079497, guid: 9f543d255ffd81345a7d485e0bcd084a, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
       propertyPath: magazinetype.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
+      propertyPath: Visitmagazine.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
@@ -1209,6 +1213,14 @@ PrefabInstance:
       propertyPath: 'magazinetype.Array.data[1]'
       value: 
       objectReference: {fileID: 65603565}
+    - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
+      propertyPath: 'Visitmagazine.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1069947416}
+    - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
+      propertyPath: 'Visitmagazine.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1564932014}
     - target: {fileID: 6733622621281187818, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.4804447
@@ -1643,7 +1655,7 @@ PrefabInstance:
     - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
       propertyPath: Preftospawn
       value: 
-      objectReference: {fileID: 5226102647784351887, guid: 47e4d90014ba6234bbc7aa96317ac277, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
       propertyPath: magazinetype.Array.size
       value: 2
@@ -2413,6 +2425,7 @@ GameObject:
   - component: {fileID: 755436598}
   - component: {fileID: 755436597}
   - component: {fileID: 755436596}
+  - component: {fileID: 755436603}
   m_Layer: 0
   m_Name: chelovek
   m_TagString: Player
@@ -2576,6 +2589,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &755436603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755436595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b5e75dd28168fe498971a38c1f8dbd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sport: {fileID: 5601310330118351209, guid: 753a4742d6f86fa449bace0b99e54144, type: 3}
+  pets: {fileID: 576777898982079497, guid: 9f543d255ffd81345a7d485e0bcd084a, type: 3}
+  fish: {fileID: 8706730481147312939, guid: 19636bfb38b11d4469de10acfb62ac9a, type: 3}
+  baker: {fileID: 6050778288129844879, guid: bc191bca76bf7994e935f089660b3acd, type: 3}
+  jewelery: {fileID: 7341130368197020095, guid: 207caec094f72794db39bab1b27f5385, type: 3}
+  pomoyka: {fileID: 5226102647784351887, guid: 47e4d90014ba6234bbc7aa96317ac277, type: 3}
 --- !u!1001 &791967330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3295,7 +3326,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1470761172}
+      - m_Target: {fileID: 755436603}
         m_TargetAssemblyTypeName: ChangeMagaz, Assembly-CSharp
         m_MethodName: Fishshop
         m_Mode: 1
@@ -3535,7 +3566,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1470761172}
+      - m_Target: {fileID: 755436603}
         m_TargetAssemblyTypeName: ChangeMagaz, Assembly-CSharp
         m_MethodName: Petshop
         m_Mode: 1
@@ -4354,7 +4385,7 @@ PrefabInstance:
     - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
       propertyPath: Preftospawn
       value: 
-      objectReference: {fileID: 8706730481147312939, guid: 19636bfb38b11d4469de10acfb62ac9a, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
       propertyPath: magazinetype.Array.size
       value: 2
@@ -4882,6 +4913,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b5e75dd28168fe498971a38c1f8dbd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sport: {fileID: 0}
+  pets: {fileID: 0}
+  fish: {fileID: 0}
+  baker: {fileID: 0}
+  jewelery: {fileID: 0}
+  pomoyka: {fileID: 0}
 --- !u!1 &1489886546
 GameObject:
   m_ObjectHideFlags: 0
@@ -5224,7 +5261,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1470761172}
+      - m_Target: {fileID: 755436603}
         m_TargetAssemblyTypeName: ChangeMagaz, Assembly-CSharp
         m_MethodName: Sportshop
         m_Mode: 1
@@ -5522,7 +5559,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1470761172}
+      - m_Target: {fileID: 755436603}
         m_TargetAssemblyTypeName: ChangeMagaz, Assembly-CSharp
         m_MethodName: Bakershop
         m_Mode: 1
@@ -6183,7 +6220,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1470761172}
+      - m_Target: {fileID: 755436603}
         m_TargetAssemblyTypeName: ChangeMagaz, Assembly-CSharp
         m_MethodName: Jeweleryshop
         m_Mode: 1
@@ -6326,7 +6363,7 @@ PrefabInstance:
     - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
       propertyPath: Preftospawn
       value: 
-      objectReference: {fileID: 6050778288129844879, guid: bc191bca76bf7994e935f089660b3acd, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
       propertyPath: magazinetype.Array.size
       value: 2
@@ -6587,7 +6624,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1470761172}
+      - m_Target: {fileID: 755436603}
         m_TargetAssemblyTypeName: ChangeMagaz, Assembly-CSharp
         m_MethodName: Pomoykashop
         m_Mode: 1

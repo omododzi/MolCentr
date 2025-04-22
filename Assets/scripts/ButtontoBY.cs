@@ -15,9 +15,7 @@ public class ButtontoBY : MonoBehaviour
     public TMP_Text text;
     public int summBY;
 
-    public GameObject Preftospawn;
-    public GameObject Cube;
-    
+    public GameObject[] Preftospawn;
     public GameObject[] Visitmagazine;
 
     void Start()
@@ -56,10 +54,12 @@ public class ButtontoBY : MonoBehaviour
                 _spawn.SpawnGuests();
             }
 
-            if (Cube != null && Preftospawn != null)
+            if (Preftospawn != null)
             {
-                Instantiate(Preftospawn,Cube.transform.position,Quaternion.identity);
-                Destroy(Cube);
+                for (int i = 0; i < Preftospawn.Length; i++)
+                {
+                    Preftospawn[i].SetActive(true);
+                }
             }
             if (Visitmagazine != null)
             {
