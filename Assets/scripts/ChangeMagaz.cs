@@ -48,7 +48,7 @@ public class ChangeMagaz : MonoBehaviour
             {
                 Destroy(_button.magazinetype[i]);
             }
-            if (_button.magazinetype[i].CompareTag("sapwn pomoyka"))
+            if (_button.magazinetype[i].CompareTag("SapwnTilet"))
             {
                 Destroy(_button.magazinetype[i]);
             }
@@ -86,7 +86,7 @@ public class ChangeMagaz : MonoBehaviour
             {
                 Destroy(_button.magazinetype[i]);
             }
-            if (_button.magazinetype[i].CompareTag("sapwn pomoyka"))
+            if (_button.magazinetype[i].CompareTag("SapwnTilet"))
             {
                 Destroy(_button.magazinetype[i]);
             }
@@ -124,7 +124,7 @@ public class ChangeMagaz : MonoBehaviour
             {
                 Destroy(_button.magazinetype[i]);
             }
-            if (_button.magazinetype[i].CompareTag("sapwn pomoyka"))
+            if (_button.magazinetype[i].CompareTag("SapwnTilet"))
             {
                 Destroy(_button.magazinetype[i]);
             }
@@ -162,7 +162,7 @@ public class ChangeMagaz : MonoBehaviour
             {
                 Destroy(_button.magazinetype[i]);
             }
-            if (_button.magazinetype[i].CompareTag("sapwn pomoyka"))
+            if (_button.magazinetype[i].CompareTag("SapwnTilet"))
             {
                 Destroy(_button.magazinetype[i]);
             }
@@ -201,7 +201,7 @@ public class ChangeMagaz : MonoBehaviour
                 Destroy(_button.magazinetype[i]);
             }
             
-            if (_button.magazinetype[i].CompareTag("sapwn pomoyka"))
+            if (_button.magazinetype[i].CompareTag("SapwnTilet"))
             {
                 Destroy(_button.magazinetype[i]);
             }
@@ -216,7 +216,7 @@ public class ChangeMagaz : MonoBehaviour
     {
         for (int i = 0; i < _button.magazinetype.Count; i++)
         {
-            if (_button.magazinetype[i].CompareTag("sapwn pomoyka"))
+            if (_button.magazinetype[i].CompareTag("SapwnTilet"))
             {
                 Instantiate(pomoyka,_button.magazinetype[i].transform.position,Quaternion.identity);
             }

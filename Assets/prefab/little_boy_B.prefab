@@ -608,6 +608,8 @@ GameObject:
   - component: {fileID: 484555855186382175}
   - component: {fileID: 1472876895604514150}
   - component: {fileID: -8999329521678595785}
+  - component: {fileID: 4733617774568900093}
+  - component: {fileID: 3100076993981966345}
   m_Layer: 0
   m_Name: little_boy_B
   m_TagString: Untagged
@@ -668,6 +670,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magazinepoints: []
+--- !u!65 &4733617774568900093
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5444639423692664270}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.17082444, y: 0.96947175, z: 0.5737244}
+  m_Center: {x: -0.029913902, y: 0.50049704, z: 0.21313782}
+--- !u!54 &3100076993981966345
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5444639423692664270}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &5634478321010793034
 GameObject:
   m_ObjectHideFlags: 0
