@@ -25,7 +25,7 @@ public class ButtontoBY : MonoBehaviour
 
     void Update()
     {
-        text.text = summBY + "$";
+        //text.text = summBY + "$";
     }
 
     private void OnCollisionEnter(Collision other)
@@ -40,18 +40,28 @@ public class ButtontoBY : MonoBehaviour
                    
                 }
             }
+            else
+            {
+                Debug.Log("pox");
+            }
             if (ButtonsOrDecor != null)
             {
                 for (int i = 0; i < ButtonsOrDecor.Length; i++)
                 {
                     ButtonsOrDecor[i].SetActive(true);
                 }
+            } else
+            {
+                Debug.Log("pox");
             }
 
             if (floor != null)
             { 
                 Instantiate(floor, spawnfloor.transform.position, Quaternion.identity);
                 _spawn.SpawnGuests();
+            } else
+            {
+                Debug.Log("pox");
             }
 
             if (Preftospawn != null)
@@ -60,6 +70,9 @@ public class ButtontoBY : MonoBehaviour
                 {
                     Preftospawn[i].SetActive(true);
                 }
+            } else
+            {
+                Debug.Log("pox");
             }
             if (Visitmagazine != null)
             {
@@ -67,6 +80,9 @@ public class ButtontoBY : MonoBehaviour
                 {
                     Visitmagazine[i].SetActive(true);
                 }
+            } else
+            {
+                Debug.Log("pox");
             }
             Destroy(gameObject);
         }

@@ -15,7 +15,7 @@ public class Spawnguest : MonoBehaviour
     for (int i = 0; i < scoreguests; i++)
     {
         int rand = Random.Range(0, guests.Length);
-        Instantiate(guests[rand], spawnPoints[numfloor].transform.position, Quaternion.identity);
+        //Instantiate(guests[rand], spawnPoints[numfloor].transform.position, Quaternion.identity);
     }
   }
   public void SpawnGuests()
@@ -25,7 +25,7 @@ public class Spawnguest : MonoBehaviour
       for (int i = 0; i < scoreguests; i++)
       {
           int rand = Random.Range(0, guests.Length);
-          Instantiate(guests[rand], spawnPoints[numfloor].transform.position, Quaternion.identity);
+          //Instantiate(guests[rand], spawnPoints[numfloor].transform.position, Quaternion.identity);
       }
   }
 }

@@ -42,9 +42,7 @@ public class cameracontroller : MonoBehaviour
             // Применяем вращение и положение к камере
             transform.rotation = rotation;
             transform.position = position;
-
-            // Вращаем объект по оси Y, чтобы он следовал за горизонтальным вращением камеры
-            target.rotation = Quaternion.Euler(0, xRotation, 0);
+            
         }
     }
 }

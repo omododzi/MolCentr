@@ -28,35 +28,54 @@ public class ChangeMagaz : MonoBehaviour
             if (_button.magazinetype[i].CompareTag("spawn sport"))
             {
                 Instantiate(sport,_button.magazinetype[i].transform.position,Quaternion.identity);
+            } else
+            {
+                Debug.Log("pox");
             }
-            if (_button.magazinetype[i].CompareTag("sapwn pet shop"))
+            if (_button.magazinetype[i].CompareTag("spawn pet shop"))
             {
                 Destroy(_button.magazinetype[i]);
-            }
-
-            if (_button.magazinetype[i].CompareTag("sapwn fish"))
+            } else
             {
-                Destroy(_button.magazinetype[i]);
-            }
-
-            if (_button.magazinetype[i].CompareTag("sapwn baker"))
-            {
-                Destroy(_button.magazinetype[i]);
+                Debug.Log("pox");
             }
 
-            if (_button.magazinetype[i].CompareTag("sapwn jewelery"))
+            if (_button.magazinetype[i].CompareTag("spawn fish"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
-            if (_button.magazinetype[i].CompareTag("SapwnTilet"))
+
+            if (_button.magazinetype[i].CompareTag("spawn baker"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
+            }
+
+            if (_button.magazinetype[i].CompareTag("spawn jewelery"))
+            {
+                Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
+            }
+            if (_button.magazinetype[i].CompareTag("SpawnTilet"))
+            {
+                Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
         }
 
         for (int i = 0; i < _button.Visitmagazine.Length; i++)
         {
             _button.Visitmagazine[i].SetActive(false);
+            Destroy(_button.magazinetype[i]);
         }
     }
 
@@ -64,36 +83,55 @@ public class ChangeMagaz : MonoBehaviour
     {
         for (int i = 0; i < _button.magazinetype.Count; i++)
         {
-            if (_button.magazinetype[i].CompareTag("sapwn pet shop"))
+            if (_button.magazinetype[i].CompareTag("spawn pet shop"))
             {
                 Instantiate(pets,_button.magazinetype[i].transform.position,Quaternion.identity);
+            } else
+            {
+                Debug.Log("pox");
             }
             if (_button.magazinetype[i].CompareTag("spawn sport"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
-            if (_button.magazinetype[i].CompareTag("sapwn fish"))
+            if (_button.magazinetype[i].CompareTag("spawn fish"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
 
-            if (_button.magazinetype[i].CompareTag("sapwn baker"))
+            if (_button.magazinetype[i].CompareTag("spawn baker"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
 
-            if (_button.magazinetype[i].CompareTag("sapwn jewelery"))
+            if (_button.magazinetype[i].CompareTag("spawn jewelery"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
-            if (_button.magazinetype[i].CompareTag("SapwnTilet"))
+            if (_button.magazinetype[i].CompareTag("SpawnTilet"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
         }
         for (int i = 0; i < _button.Visitmagazine.Length; i++)
         {
             _button.Visitmagazine[i].SetActive(false);
+            Destroy(_button.magazinetype[i]);
         }
     }
 
@@ -101,37 +139,56 @@ public class ChangeMagaz : MonoBehaviour
     {
         for (int i = 0; i < _button.magazinetype.Count; i++)
         {
-            if (_button.magazinetype[i].CompareTag("sapwn fish"))
+            if (_button.magazinetype[i].CompareTag("spawn fish"))
             {
                 Instantiate(fish,_button.magazinetype[i].transform.position,Quaternion.identity);
+            } else
+            {
+                Debug.Log("pox");
             }
             if (_button.magazinetype[i].CompareTag("spawn sport"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
 
-            if (_button.magazinetype[i].CompareTag("sapwn pet shop"))
+            if (_button.magazinetype[i].CompareTag("spawn pet shop"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
 
-            if (_button.magazinetype[i].CompareTag("sapwn baker"))
+            if (_button.magazinetype[i].CompareTag("spawn baker"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
 
-            if (_button.magazinetype[i].CompareTag("sapwn jewelery"))
+            if (_button.magazinetype[i].CompareTag("spawn jewelery"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
-            if (_button.magazinetype[i].CompareTag("SapwnTilet"))
+            if (_button.magazinetype[i].CompareTag("SpawnTilet"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
         }
         for (int i = 0; i < _button.Visitmagazine.Length; i++)
         {
             _button.Visitmagazine[i].SetActive(false);
+            Destroy(_button.magazinetype[i]);
         }
     }
 
@@ -139,37 +196,56 @@ public class ChangeMagaz : MonoBehaviour
     {
         for (int i = 0; i < _button.magazinetype.Count; i++)
         {
-            if (_button.magazinetype[i].CompareTag("sapwn baker"))
+            if (_button.magazinetype[i].CompareTag("spawn baker"))
             {
-                Instantiate(baker,_button.magazinetype[i].transform.position,Quaternion.identity);
+                Instantiate(baker,_button.magazinetype[i].transform.position,_button.magazinetype[i].transform.rotation);
+            } else
+            {
+                Debug.Log("pox");
             }
             if (_button.magazinetype[i].CompareTag("spawn sport"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
 
-            if (_button.magazinetype[i].CompareTag("sapwn pet shop"))
+            if (_button.magazinetype[i].CompareTag("spawn pet shop"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
 
-            if (_button.magazinetype[i].CompareTag("sapwn fish"))
+            if (_button.magazinetype[i].CompareTag("spawn fish"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
 
-            if (_button.magazinetype[i].CompareTag("sapwn jewelery"))
+            if (_button.magazinetype[i].CompareTag("spawn jewelery"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
-            if (_button.magazinetype[i].CompareTag("SapwnTilet"))
+            if (_button.magazinetype[i].CompareTag("SpawnTilet"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
         }
         for (int i = 0; i < _button.Visitmagazine.Length; i++)
         {
             _button.Visitmagazine[i].SetActive(false);
+            Destroy(_button.magazinetype[i]);
         }
     }
 
@@ -177,38 +253,57 @@ public class ChangeMagaz : MonoBehaviour
     {
         for (int i = 0; i < _button.magazinetype.Count; i++)
         {
-            if (_button.magazinetype[i].CompareTag("sapwn jewelery"))
+            if (_button.magazinetype[i].CompareTag("spawn jewelery"))
             {
-                Instantiate(jewelery,_button.magazinetype[i].transform.position,Quaternion.identity);
+                Instantiate(jewelery,_button.magazinetype[i].transform.position,_button.magazinetype[i].transform.rotation);
+            } else
+            {
+                Debug.Log("pox");
             }
             if (_button.magazinetype[i].CompareTag("spawn sport"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
 
-            if (_button.magazinetype[i].CompareTag("sapwn pet shop"))
+            if (_button.magazinetype[i].CompareTag("spawn pet shop"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
 
-            if (_button.magazinetype[i].CompareTag("sapwn fish"))
+            if (_button.magazinetype[i].CompareTag("spawn fish"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
 
-            if (_button.magazinetype[i].CompareTag("sapwn baker"))
+            if (_button.magazinetype[i].CompareTag("spawn baker"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
             
-            if (_button.magazinetype[i].CompareTag("SapwnTilet"))
+            if (_button.magazinetype[i].CompareTag("SpawnTilet"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
         }
         for (int i = 0; i < _button.Visitmagazine.Length; i++)
         {
             _button.Visitmagazine[i].SetActive(false);
+            Destroy(_button.magazinetype[i]);
         }
     }
 
@@ -216,38 +311,57 @@ public class ChangeMagaz : MonoBehaviour
     {
         for (int i = 0; i < _button.magazinetype.Count; i++)
         {
-            if (_button.magazinetype[i].CompareTag("SapwnTilet"))
+            if (_button.magazinetype[i].CompareTag("SpawnTilet"))
             {
                 Instantiate(pomoyka,_button.magazinetype[i].transform.position,Quaternion.identity);
+            } else
+            {
+                Debug.Log("pox");
             }
             if (_button.magazinetype[i].CompareTag("spawn sport"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
 
-            if (_button.magazinetype[i].CompareTag("sapwn pet shop"))
+            if (_button.magazinetype[i].CompareTag("spawn pet shop"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
 
-            if (_button.magazinetype[i].CompareTag("sapwn fish"))
+            if (_button.magazinetype[i].CompareTag("spawn fish"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
 
-            if (_button.magazinetype[i].CompareTag("sapwn baker"))
+            if (_button.magazinetype[i].CompareTag("spawn baker"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
 
-            if (_button.magazinetype[i].CompareTag("sapwn jewelery"))
+            if (_button.magazinetype[i].CompareTag("spawn jewelery"))
             {
                 Destroy(_button.magazinetype[i]);
+            } else
+            {
+                Debug.Log("pox");
             }
         } 
         for (int i = 0; i < _button.Visitmagazine.Length; i++)
         {
             _button.Visitmagazine[i].SetActive(false);
+            Destroy(_button.magazinetype[i]);
         }
     }
 }
