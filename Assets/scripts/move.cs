@@ -31,7 +31,7 @@ public class move : MonoBehaviour
     private void Move()
     {
         float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : moveSpeed;
-        
+    
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -40,13 +40,14 @@ public class move : MonoBehaviour
         if (movement.magnitude > 0.1f)
         {
             movement.Normalize();
-            
+        
             float targetAngle = Mathf.Atan2(movement.x, movement.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
             Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            
+        
             rb.linearVelocity = new Vector3(moveDirection.x * currentSpeed, rb.linearVelocity.y, moveDirection.z * currentSpeed);
 
-            Quaternion targetRotation = Quaternion.Euler(0f, targetAngle, 0f);
+            // Сохраняем изначальный наклон модели (90 по X), но поворачиваем только по Y
+            Quaternion targetRotation = Quaternion.Euler(90f, targetAngle, 0f);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
         else
