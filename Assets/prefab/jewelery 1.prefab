@@ -381,6 +381,11 @@ PrefabInstance:
       addedObject: {fileID: 4879819089155630141}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 294f5c9ffecc1384a83847612112dafe, type: 3}
+--- !u!1 &4628163613460389043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7082451112203525483, guid: 294f5c9ffecc1384a83847612112dafe, type: 3}
+  m_PrefabInstance: {fileID: 2482435065335235032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5436226167290037769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7566675674065684433, guid: 294f5c9ffecc1384a83847612112dafe, type: 3}
@@ -552,6 +557,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7566675674065684433, guid: 294f5c9ffecc1384a83847612112dafe, type: 3}
   m_PrefabInstance: {fileID: 3076676774321182809}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5258910216898856242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7082451112203525483, guid: 294f5c9ffecc1384a83847612112dafe, type: 3}
+  m_PrefabInstance: {fileID: 3076676774321182809}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3924826589107746019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -560,6 +570,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 911494472516825075}
     m_Modifications:
+    - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
+      propertyPath: Preftospawn.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
+      propertyPath: 'Preftospawn.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5258910216898856242}
+    - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
+      propertyPath: 'Preftospawn.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4628163613460389043}
     - target: {fileID: 6733622621281187818, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.93
@@ -700,6 +722,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 911494472516825075}
     m_Modifications:
+    - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
+      propertyPath: 'Preftospawn.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4838946910379355970}
     - target: {fileID: 6733622621281187818, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.6
@@ -1125,6 +1151,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 911494472516825075}
     m_Modifications:
+    - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
+      propertyPath: Preftospawn.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
+      propertyPath: 'Preftospawn.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2828238626747312104}
+    - target: {fileID: 1296153075785385489, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
+      propertyPath: 'Preftospawn.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3158514462395362607}
     - target: {fileID: 6733622621281187818, guid: 3dbf0f720b8e882478e2ed879eba73f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.5544243

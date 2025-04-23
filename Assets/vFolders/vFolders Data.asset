@@ -29,11 +29,11 @@ MonoBehaviour:
     - colorIndex: 1
       iconNameOrGuid: AnimationClip Icon
     - colorIndex: 2
-      iconNameOrGuid: Settings Icon
+      iconNameOrGuid: AudioMixerController Icon
     - colorIndex: 3
       iconNameOrGuid: Material Icon
     - colorIndex: 3
-      iconNameOrGuid: 
+      iconNameOrGuid: PrefabModel Icon
     - colorIndex: 4
       iconNameOrGuid: 
     - colorIndex: 5
