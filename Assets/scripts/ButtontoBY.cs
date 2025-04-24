@@ -42,7 +42,15 @@ public class ButtontoBY : MonoBehaviour
         {
             summBY = 500;
         }
-        _money = mycassa.GetComponent<CassaMoney>();
+
+        if (mycassa != null)
+        {
+            _money = mycassa.GetComponent<CassaMoney>();
+        }
+        else
+        {
+            Debug.Log("pox");
+        }
         summBY *= summbaff;
         _spawn = new Spawnguest();
     }
