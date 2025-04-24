@@ -39,6 +39,7 @@ public class ButtontoBY : MonoBehaviour
                     magazinetype[i].SetActive(true);
                    
                 }
+                Destroy(gameObject);
             }
             else
             {
@@ -50,6 +51,7 @@ public class ButtontoBY : MonoBehaviour
                 {
                     ButtonsOrDecor[i].SetActive(true);
                 }
+                Destroy(gameObject);
             } else
             {
                 Debug.Log("pox");
@@ -59,6 +61,7 @@ public class ButtontoBY : MonoBehaviour
             { 
                 Instantiate(floor, spawnfloor.transform.position, Quaternion.identity);
                 _spawn.SpawnGuests();
+                Destroy(gameObject);
             } else
             {
                 Debug.Log("pox");
@@ -70,6 +73,7 @@ public class ButtontoBY : MonoBehaviour
                 {
                     Preftospawn[i].SetActive(true);
                 }
+                Destroy(gameObject);
             } else
             {
                 Debug.Log("pox");
@@ -80,11 +84,12 @@ public class ButtontoBY : MonoBehaviour
                 {
                     Visitmagazine[i].SetActive(true);
                 }
+                Destroy(gameObject);
             } else
             {
                 Debug.Log("pox");
             }
-            Destroy(gameObject);
+            
         }
     }
 }
