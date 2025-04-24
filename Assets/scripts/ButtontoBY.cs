@@ -13,13 +13,37 @@ public class ButtontoBY : MonoBehaviour
     public GameObject spawnfloor;
     private Spawnguest _spawn;
     public TMP_Text text;
-    public int summBY;
+    public int summBY = 1;
+    public int pribavka;
+    public static int lvlfloor = 1;
+    public static int summbaff;
+
+    public GameObject mycassa;
+    private CassaMoney _money;
 
     public GameObject[] Preftospawn;
     public GameObject[] Visitmagazine;
 
     void Start()
     {
+        if (lvlfloor == 1)
+        {
+            summBY = 150;
+        }else if (lvlfloor == 2)
+        {
+            summBY = 300;
+        }else if (lvlfloor == 3)
+        {
+            summBY = 400;
+        }else if (lvlfloor == 4)
+        {
+            
+        }else if (lvlfloor == 5)
+        {
+            summBY = 500;
+        }
+        _money = mycassa.GetComponent<CassaMoney>();
+        summBY *= summbaff;
         _spawn = new Spawnguest();
     }
 
@@ -50,6 +74,14 @@ public class ButtontoBY : MonoBehaviour
                 for (int i = 0; i < ButtonsOrDecor.Length; i++)
                 {
                     ButtonsOrDecor[i].SetActive(true);
+                   
+                }
+                if (mycassa != null)
+                {
+                    _money.money += pribavka;
+                }else
+                {
+                    Debug.Log("pox");
                 }
                 Destroy(gameObject);
             } else
@@ -58,7 +90,9 @@ public class ButtontoBY : MonoBehaviour
             }
 
             if (floor != null)
-            { 
+            {
+                lvlfloor++;
+                summbaff += 3;
                 Instantiate(floor, spawnfloor.transform.position, Quaternion.identity);
                 _spawn.SpawnGuests();
                 Destroy(gameObject);
@@ -72,6 +106,13 @@ public class ButtontoBY : MonoBehaviour
                 for (int i = 0; i < Preftospawn.Length; i++)
                 {
                     Preftospawn[i].SetActive(true);
+                }
+                if (mycassa != null)
+                {
+                    _money.money += pribavka;
+                }else
+                {
+                    Debug.Log("pox");
                 }
                 Destroy(gameObject);
             } else
