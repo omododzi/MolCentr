@@ -4643,6 +4643,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631993584}
   m_CullTransparentMesh: 1
+--- !u!1 &1645532983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8797147980077701354, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+  m_PrefabInstance: {fileID: 12673365523037254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1645532988
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645532983}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.23, y: 0.76, z: 2.08}
+  m_Center: {x: -1.037487, y: 0.6540529, z: -0.77095413}
 --- !u!1 &1661176759
 GameObject:
   m_ObjectHideFlags: 0
@@ -5921,6 +5947,10 @@ PrefabInstance:
       propertyPath: 'Preftospawn.Array.data[0]'
       value: 
       objectReference: {fileID: 149308829}
+    - target: {fileID: 5509507835982753946, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5560504261178964068, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       propertyPath: 'magazinetype.Array.data[0]'
       value: 
@@ -5981,6 +6011,34 @@ PrefabInstance:
       propertyPath: 'Preftospawn.Array.data[0]'
       value: 
       objectReference: {fileID: 1448838795}
+    - target: {fileID: 6796048725730254283, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Size.x
+      value: 2.0676708
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796048725730254283, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5995218
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796048725730254283, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Size.z
+      value: 1.9041824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796048725730254283, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796048725730254283, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Center.x
+      value: -1.037487
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796048725730254283, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Center.y
+      value: 0.6540529
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796048725730254283, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Center.z
+      value: -0.77095413
+      objectReference: {fileID: 0}
     - target: {fileID: 7251968207247837515, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       propertyPath: 'Preftospawn.Array.data[0]'
       value: 
@@ -6001,6 +6059,10 @@ PrefabInstance:
       propertyPath: 'Visitmagazine.Array.data[1]'
       value: 
       objectReference: {fileID: 1025847619}
+    - target: {fileID: 8797147980077701354, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
     - target: {fileID: 9095103421972752990, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       propertyPath: 'Preftospawn.Array.data[0]'
       value: 
@@ -6024,6 +6086,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1791927067522322262, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 8797147980077701354, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1645532988}
     - targetCorrespondingSourceObject: {fileID: 3276207317824425206, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}

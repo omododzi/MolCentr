@@ -12,11 +12,11 @@ public class ChangeMagaz : MonoBehaviour
     public GameObject jewelery;
     public GameObject pomoyka;
 
-    private void OnCollisionEnter(Collision other)
+    private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (other.gameObject.CompareTag("Button"))
+        if (hit.gameObject.CompareTag("Button"))
         {
-            _button = other.gameObject.GetComponent<ButtontoBY>();
+            _button = hit.gameObject.GetComponent<ButtontoBY>();
         }
     }
 

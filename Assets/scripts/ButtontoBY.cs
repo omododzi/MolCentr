@@ -63,8 +63,7 @@ public class ButtontoBY : MonoBehaviour
         text.text = summBY + "$";
         text.transform.LookAt(player.transform);
     }
-
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
