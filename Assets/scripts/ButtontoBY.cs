@@ -24,8 +24,11 @@ public class ButtontoBY : MonoBehaviour
     public GameObject[] Preftospawn;
     public GameObject[] Visitmagazine;
 
+    private GameObject player;
+
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         if (lvlfloor == 1)
         {
             summBY = 150;
@@ -57,7 +60,8 @@ public class ButtontoBY : MonoBehaviour
 
     void Update()
     {
-        //text.text = summBY + "$";
+        text.text = summBY + "$";
+        text.transform.LookAt(player.transform);
     }
 
     private void OnCollisionEnter(Collision other)
