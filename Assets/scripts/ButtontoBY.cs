@@ -105,7 +105,7 @@ public class ButtontoBY : MonoBehaviour
                 lvlfloor++;
                 summbaff += 3;
                 Instantiate(floor, spawnfloor.transform.position, Quaternion.identity);
-                _spawn.SpawnGuests();
+                //_spawn.SpawnGuests();
                 Destroy(gameObject);
             } else
             {

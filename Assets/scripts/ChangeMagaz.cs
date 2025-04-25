@@ -11,6 +11,7 @@ public class ChangeMagaz : MonoBehaviour
     public GameObject baker;
     public GameObject jewelery;
     public GameObject pomoyka;
+    public Transform posecube;
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -85,7 +86,7 @@ public class ChangeMagaz : MonoBehaviour
         {
             if (_button.magazinetype[i].CompareTag("spawn pet shop"))
             {
-                Instantiate(pets,_button.magazinetype[i].transform.position,Quaternion.identity);
+                Instantiate(pets,posecube.position,Quaternion.identity);
             } else
             {
                 Debug.Log("pox");
