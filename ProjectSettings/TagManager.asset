@@ -19,6 +19,7 @@ TagManager:
   - spawn sport
   - magazine
   - Button
+  - Cards
   layers:
   - Default
   - TransparentFX

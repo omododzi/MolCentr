@@ -282,7 +282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2760179329640975962
 Transform:
   m_ObjectHideFlags: 0
@@ -314,6 +314,7 @@ GameObject:
   - component: {fileID: 7397051292326810876}
   - component: {fileID: 5838988800922278745}
   - component: {fileID: 8569424478799671187}
+  - component: {fileID: 2155257549559328298}
   m_Layer: 0
   m_Name: SM_sink
   m_TagString: magazine
@@ -391,6 +392,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2155257549559328298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7920787591065734726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96eb69c22d421ca45b1049255d0bf771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 0
 --- !u!1001 &917784713287517315
 PrefabInstance:
   m_ObjectHideFlags: 0

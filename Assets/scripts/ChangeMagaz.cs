@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -11,7 +10,7 @@ public class ChangeMagaz : MonoBehaviour
     public GameObject baker;
     public GameObject jewelery;
     public GameObject pomoyka;
-    public Transform posecube;
+    List<GameObject> cards;
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -21,348 +20,61 @@ public class ChangeMagaz : MonoBehaviour
         }
     }
 
-
-    public void Sportshop()
+    private void ProcessShopType(GameObject prefab, string spawnTag)
     {
-        for (int i = 0; i < _button.magazinetype.Count; i++)
+        
+
+        // Сначала находим все объекты для спавна и уничтожения
+        List<GameObject> toDestroy = new List<GameObject>();
+        GameObject spawnPoint = null;
+
+        foreach (var obj in _button.magazinetype)
         {
-            if (_button.magazinetype[i].CompareTag("spawn sport"))
-            {
-                Instantiate(sport,_button.magazinetype[i].transform.position,Quaternion.identity);
-            } else
-            {
-                Debug.Log("pox");
-            }
-            if (_button.magazinetype[i].CompareTag("spawn pet shop"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
+            if (obj == null) continue;
 
-            if (_button.magazinetype[i].CompareTag("spawn fish"))
+            if (obj.CompareTag(spawnTag))
             {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
+                spawnPoint = obj;
             }
-
-            if (_button.magazinetype[i].CompareTag("spawn baker"))
+            else
             {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-
-            if (_button.magazinetype[i].CompareTag("spawn jewelery"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-            if (_button.magazinetype[i].CompareTag("SpawnTilet"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
+                toDestroy.Add(obj);
             }
         }
 
-        for (int i = 0; i < _button.Visitmagazine.Length; i++)
+        // Спавним новый объект
+        if (spawnPoint != null && prefab != null)
         {
-            _button.Visitmagazine[i].SetActive(false);
-            Destroy(_button.magazinetype[i]);
+            Instantiate(prefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
+        }
+
+        // Уничтожаем ненужные объекты
+        foreach (var obj in toDestroy)
+        {
+            if (obj != null) Destroy(obj);
+        }
+
+        // Деактивируем Visitmagazine
+        if (_button.Visitmagazine != null)
+        {
+            cards = new List<GameObject>(GameObject.FindGameObjectsWithTag("Cards"));
+            foreach (var obj in _button.Visitmagazine)
+            {
+                if (obj != null) obj.SetActive(false);
+                
+                for (int i = 0; i < cards.Count; i++)
+                {
+                    cards[i].SetActive(false);
+                }
+            }
+            cards.Clear();
         }
     }
 
-    public void Petshop()
-    {
-        for (int i = 0; i < _button.magazinetype.Count; i++)
-        {
-            if (_button.magazinetype[i].CompareTag("spawn pet shop"))
-            {
-                Instantiate(pets,posecube.position,Quaternion.identity);
-            } else
-            {
-                Debug.Log("pox");
-            }
-            if (_button.magazinetype[i].CompareTag("spawn sport"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-            if (_button.magazinetype[i].CompareTag("spawn fish"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-
-            if (_button.magazinetype[i].CompareTag("spawn baker"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-
-            if (_button.magazinetype[i].CompareTag("spawn jewelery"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-            if (_button.magazinetype[i].CompareTag("SpawnTilet"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-        }
-        for (int i = 0; i < _button.Visitmagazine.Length; i++)
-        {
-            _button.Visitmagazine[i].SetActive(false);
-            Destroy(_button.magazinetype[i]);
-        }
-    }
-
-    public void Fishshop()
-    {
-        for (int i = 0; i < _button.magazinetype.Count; i++)
-        {
-            if (_button.magazinetype[i].CompareTag("spawn fish"))
-            {
-                Instantiate(fish,_button.magazinetype[i].transform.position,Quaternion.identity);
-            } else
-            {
-                Debug.Log("pox");
-            }
-            if (_button.magazinetype[i].CompareTag("spawn sport"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-
-            if (_button.magazinetype[i].CompareTag("spawn pet shop"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-
-            if (_button.magazinetype[i].CompareTag("spawn baker"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-
-            if (_button.magazinetype[i].CompareTag("spawn jewelery"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-            if (_button.magazinetype[i].CompareTag("SpawnTilet"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-        }
-        for (int i = 0; i < _button.Visitmagazine.Length; i++)
-        {
-            _button.Visitmagazine[i].SetActive(false);
-            Destroy(_button.magazinetype[i]);
-        }
-    }
-
-    public void Bakershop()
-    {
-        for (int i = 0; i < _button.magazinetype.Count; i++)
-        {
-            if (_button.magazinetype[i].CompareTag("spawn baker"))
-            {
-                Instantiate(baker,_button.magazinetype[i].transform.position,_button.magazinetype[i].transform.rotation);
-            } else
-            {
-                Debug.Log("pox");
-            }
-            if (_button.magazinetype[i].CompareTag("spawn sport"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-
-            if (_button.magazinetype[i].CompareTag("spawn pet shop"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-
-            if (_button.magazinetype[i].CompareTag("spawn fish"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-
-            if (_button.magazinetype[i].CompareTag("spawn jewelery"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-            if (_button.magazinetype[i].CompareTag("SpawnTilet"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-        }
-        for (int i = 0; i < _button.Visitmagazine.Length; i++)
-        {
-            _button.Visitmagazine[i].SetActive(false);
-            Destroy(_button.magazinetype[i]);
-        }
-    }
-
-    public void Jeweleryshop()
-    {
-        for (int i = 0; i < _button.magazinetype.Count; i++)
-        {
-            if (_button.magazinetype[i].CompareTag("spawn jewelery"))
-            {
-                Instantiate(jewelery,_button.magazinetype[i].transform.position,_button.magazinetype[i].transform.rotation);
-            } else
-            {
-                Debug.Log("pox");
-            }
-            if (_button.magazinetype[i].CompareTag("spawn sport"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-
-            if (_button.magazinetype[i].CompareTag("spawn pet shop"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-
-            if (_button.magazinetype[i].CompareTag("spawn fish"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-
-            if (_button.magazinetype[i].CompareTag("spawn baker"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-            
-            if (_button.magazinetype[i].CompareTag("SpawnTilet"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-        }
-        for (int i = 0; i < _button.Visitmagazine.Length; i++)
-        {
-            _button.Visitmagazine[i].SetActive(false);
-            Destroy(_button.magazinetype[i]);
-        }
-    }
-
-    public void Pomoykashop()
-    {
-        for (int i = 0; i < _button.magazinetype.Count; i++)
-        {
-            if (_button.magazinetype[i].CompareTag("SpawnTilet"))
-            {
-                Instantiate(pomoyka,_button.magazinetype[i].transform.position,Quaternion.identity);
-            } else
-            {
-                Debug.Log("pox");
-            }
-            if (_button.magazinetype[i].CompareTag("spawn sport"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-
-            if (_button.magazinetype[i].CompareTag("spawn pet shop"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-
-            if (_button.magazinetype[i].CompareTag("spawn fish"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-
-            if (_button.magazinetype[i].CompareTag("spawn baker"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-
-            if (_button.magazinetype[i].CompareTag("spawn jewelery"))
-            {
-                Destroy(_button.magazinetype[i]);
-            } else
-            {
-                Debug.Log("pox");
-            }
-        } 
-        for (int i = 0; i < _button.Visitmagazine.Length; i++)
-        {
-            _button.Visitmagazine[i].SetActive(false);
-            Destroy(_button.magazinetype[i]);
-        }
-    }
+    public void Sportshop() => ProcessShopType(sport, "spawn sport");
+    public void Petshop() => ProcessShopType(pets, "spawn pet shop");
+    public void Fishshop() => ProcessShopType(fish, "spawn fish");
+    public void Bakershop() => ProcessShopType(baker, "spawn baker");
+    public void Jeweleryshop() => ProcessShopType(jewelery, "spawn jewelery");
+    public void Pomoykashop() => ProcessShopType(pomoyka, "SpawnTilet");
 }

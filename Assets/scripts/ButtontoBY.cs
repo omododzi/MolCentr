@@ -72,7 +72,6 @@ public class ButtontoBY : MonoBehaviour
                 for (int i = 0; i < magazinetype.Count; i++)
                 {
                     magazinetype[i].SetActive(true);
-                   
                 }
                 Destroy(gameObject);
             }
@@ -100,7 +99,7 @@ public class ButtontoBY : MonoBehaviour
                 Debug.Log("pox");
             }
 
-            if (floor != null)
+            if (floor != null && lvlfloor !=5)
             {
                 lvlfloor++;
                 summbaff += 3;
