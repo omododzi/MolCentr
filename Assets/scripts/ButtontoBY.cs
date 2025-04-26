@@ -8,7 +8,7 @@ public class ButtontoBY : MonoBehaviour
 {
     
     public List<GameObject> magazinetype;
-    public GameObject[] ButtonsOrDecor;
+    public GameObject[] Buttons;
     public GameObject floor;
     public GameObject spawnfloor;
     private Spawnguest _spawn;
@@ -17,6 +17,8 @@ public class ButtontoBY : MonoBehaviour
     public int pribavka;
     public static int lvlfloor = 1;
     public static int summbaff;
+    public GameObject Decor;
+    public GameObject CubeDecor;
 
     public GameObject mycassa;
     private CassaMoney _money;
@@ -79,11 +81,11 @@ public class ButtontoBY : MonoBehaviour
             {
                 Debug.Log("pox");
             }
-            if (ButtonsOrDecor != null)
+            if (Buttons != null)
             {
-                for (int i = 0; i < ButtonsOrDecor.Length; i++)
+                for (int i = 0; i < Buttons.Length; i++)
                 {
-                    ButtonsOrDecor[i].SetActive(true);
+                    Buttons[i].SetActive(true);
                    
                 }
                 if (mycassa != null)
@@ -99,6 +101,10 @@ public class ButtontoBY : MonoBehaviour
                 Debug.Log("pox");
             }
 
+            if (Decor != null && CubeDecor != null)
+            {
+                Instantiate(Decor,CubeDecor.transform.localPosition,Quaternion.identity);
+            }
             if (floor != null && lvlfloor !=5)
             {
                 lvlfloor++;
