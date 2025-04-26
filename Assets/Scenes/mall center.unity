@@ -689,8 +689,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1407980795}
   distance: 8
+  minDistance: 0
   sensitivity: 325
-  ybaf: 5
+  yOffset: 5
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 8
+  minVerticalAngle: -80
+  maxVerticalAngle: 80
 --- !u!1001 &364483779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2411,6 +2417,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1777314918746308707, guid: 8a54487d0aa13f244bfb3564e7e43f44, type: 3}
+      propertyPath: m_Size.y
+      value: 40.02198
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777314918746308707, guid: 8a54487d0aa13f244bfb3564e7e43f44, type: 3}
+      propertyPath: m_Center.y
+      value: -19.510992
+      objectReference: {fileID: 0}
     - target: {fileID: 3237715300301822410, guid: 8a54487d0aa13f244bfb3564e7e43f44, type: 3}
       propertyPath: m_Name
       value: floor
@@ -3468,6 +3482,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 122366527940759881, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 951794356189400248, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1279047383870310015, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       propertyPath: 'ButtonsOrDecor.Array.data[0]'
       value: 
@@ -3476,6 +3498,14 @@ PrefabInstance:
       propertyPath: 'ButtonsOrDecor.Array.data[0]'
       value: 
       objectReference: {fileID: 1146646123}
+    - target: {fileID: 2067479446088951627, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2598347832051114537, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2761973208005991079, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       propertyPath: 'Visitmagazine.Array.data[0]'
       value: 
@@ -3492,6 +3522,14 @@ PrefabInstance:
       propertyPath: 'Visitmagazine.Array.data[1]'
       value: 
       objectReference: {fileID: 1873216174}
+    - target: {fileID: 3688886049847520429, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780460818416647248, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3881547476379850950, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       propertyPath: 'magazinetype.Array.data[0]'
       value: 
@@ -3507,6 +3545,10 @@ PrefabInstance:
     - target: {fileID: 4324266511593175046, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       propertyPath: m_Name
       value: large
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324436192977567677, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4433104745709890180, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       propertyPath: 'ButtonsOrDecor.Array.data[0]'
@@ -3576,14 +3618,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6294216615872710717, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6342250321043528044, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       propertyPath: 'ButtonsOrDecor.Array.data[0]'
       value: 
       objectReference: {fileID: 1448838795}
+    - target: {fileID: 6857967497550184259, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7251968207247837515, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       propertyPath: 'ButtonsOrDecor.Array.data[0]'
       value: 
       objectReference: {fileID: 135934198}
+    - target: {fileID: 8338265607805020800, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8664837827048403821, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       propertyPath: 'Visitmagazine.Array.data[0]'
       value: 
@@ -3592,6 +3646,10 @@ PrefabInstance:
       propertyPath: 'Visitmagazine.Array.data[1]'
       value: 
       objectReference: {fileID: 1025847619}
+    - target: {fileID: 8796353256419023224, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9095103421972752990, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       propertyPath: 'ButtonsOrDecor.Array.data[0]'
       value: 

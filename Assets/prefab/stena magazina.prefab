@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8317852429251440882}
   - component: {fileID: 4600002463557284604}
   - component: {fileID: 7115484829419964933}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: stena magazina
   m_TagString: Untagged
   m_Icon: {fileID: 0}

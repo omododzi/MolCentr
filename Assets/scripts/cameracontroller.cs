@@ -1,48 +1,76 @@
 using UnityEngine;
 
-public class cameracontroller : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
-    public Transform target; // Объект, вокруг которого будет вращаться камера
-    public float distance = 10.0f; // Расстояние от камеры до объекта
-    public float sensitivity = 100.0f; // Чувствительность вращения
-    public float ybaf = 0f;
+    [Header("Camera Settings")]
+    [SerializeField] private Transform target; // Объект, вокруг которого вращается камера
+    [SerializeField] private float distance = 10.0f; // Стандартное расстояние
+    [SerializeField] private float minDistance = 2.0f; // Минимальное расстояние
+    [SerializeField] private float sensitivity = 100.0f; // Чувствительность мыши
+    [SerializeField] private float yOffset = 0f; // Вертикальное смещение камеры
+    [SerializeField] private LayerMask obstacleMask; // Слои препятствий
 
-    private float xRotation = 0.0f;
-    private float yRotation = 0.0f;
+    [Header("Rotation Clamp")]
+    [SerializeField] private float minVerticalAngle = -80f;
+    [SerializeField] private float maxVerticalAngle = 80f;
+
+    private float xRotation = 0f;
+    private float yRotation = 0f;
+    private float currentDistance;
 
     void Start()
     {
-        // Инициализация начального положения камеры
-        Vector3 angles = transform.eulerAngles;
-        xRotation = angles.y;
-        yRotation = angles.x;
+        Cursor.lockState = CursorLockMode.Locked; // Блокировка курсора
+        currentDistance = distance;
 
-        // Если target не назначен, используем текущее положение камеры
         if (target == null)
         {
-            Debug.LogWarning("Target not assigned. Camera will rotate around its own position.");
+            Debug.LogError("CameraController: Target not assigned!");
+            enabled = false; // Отключаем скрипт, если нет цели
         }
     }
 
     void LateUpdate()
     {
-        if (target)
+        if (!target) return;
+
+        // Обработка ввода мыши
+        xRotation += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+        yRotation -= Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
+        yRotation = Mathf.Clamp(yRotation, minVerticalAngle, maxVerticalAngle);
+
+        // Вычисляем желаемую позицию камеры
+        Quaternion rotation = Quaternion.Euler(yRotation, xRotation, 0);
+        Vector3 desiredPosition = target.position + rotation * new Vector3(0, yOffset, -distance);
+
+        // Проверка на столкновения с препятствиями
+        HandleCameraCollision(rotation, ref desiredPosition);
+
+        // Плавное перемещение камеры
+        transform.position = desiredPosition;
+        transform.rotation = rotation;
+    }
+
+    private void HandleCameraCollision(Quaternion rotation, ref Vector3 desiredPosition)
+    {
+        RaycastHit hit;
+        Vector3 direction = (desiredPosition - target.position).normalized;
+        float maxDistance = Vector3.Distance(target.position, desiredPosition);
+
+        if (Physics.SphereCast(
+            target.position,
+            0.2f, // Радиус сферы для плавного обхода углов
+            direction,
+            out hit,
+            maxDistance,
+            obstacleMask))
         {
-            // Получаем ввод от мыши
-            xRotation += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
-            yRotation -= Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
-
-            // Ограничиваем угол вращения по вертикали, чтобы камера не переворачивалась
-            yRotation = Mathf.Clamp(yRotation, -80, 80);
-
-            // Вычисляем новое положение камеры
-            Quaternion rotation = Quaternion.Euler(yRotation, xRotation, 0);
-            Vector3 position = rotation * new Vector3(0.0f, 0.0f + ybaf, -distance) + target.position;
-
-            // Применяем вращение и положение к камере
-            transform.rotation = rotation;
-            transform.position = position;
-            
+            currentDistance = Mathf.Clamp(hit.distance * 0.9f, minDistance, distance);
+            desiredPosition = target.position + rotation * new Vector3(0, yOffset, -currentDistance);
+        }
+        else
+        {
+            currentDistance = distance;
         }
     }
 }
