@@ -3379,6 +3379,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026459999}
   m_CullTransparentMesh: 1
+--- !u!1 &2026515076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1784610227419873898, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+  m_PrefabInstance: {fileID: 12673365523037254}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2070951646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3537,7 +3542,7 @@ PrefabInstance:
     - target: {fileID: 2761973208005991079, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       propertyPath: 'magazinetype.Array.data[0]'
       value: 
-      objectReference: {fileID: 1852052919}
+      objectReference: {fileID: 2026515076}
     - target: {fileID: 2761973208005991079, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       propertyPath: 'Visitmagazine.Array.data[0]'
       value: 
@@ -4793,13 +4798,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7794729449397599604, guid: 47e4d90014ba6234bbc7aa96317ac277, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 5402832858484216304, guid: 47e4d90014ba6234bbc7aa96317ac277, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47e4d90014ba6234bbc7aa96317ac277, type: 3}
 --- !u!1001 &8123205510754703199
 PrefabInstance:
