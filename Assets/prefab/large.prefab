@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 3702419193470022306}
   - component: {fileID: 147647922341551839}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: CubePet
   m_TagString: spawn pet shop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2030,7 +2030,7 @@ GameObject:
   - component: {fileID: 5897251194176995591}
   m_Layer: 0
   m_Name: large
-  m_TagString: Untagged
+  m_TagString: large
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3476,7 +3476,6 @@ MonoBehaviour:
   baker: {fileID: 0}
   jewelery: {fileID: 0}
   pomoyka: {fileID: 0}
-  posecube: {fileID: 0}
 --- !u!1 &7767306430300516309
 GameObject:
   m_ObjectHideFlags: 0

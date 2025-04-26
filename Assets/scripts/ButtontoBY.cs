@@ -106,7 +106,10 @@ public class ButtontoBY : MonoBehaviour
                 Instantiate(floor, spawnfloor.transform.position, Quaternion.identity);
                 //_spawn.SpawnGuests();
                 Destroy(gameObject);
-            } else
+            } else if (lvlfloor == 5 && floor != null)
+            {
+                Debug.Log("restart");
+            }else if (floor == null)
             {
                 Debug.Log("pox");
             }

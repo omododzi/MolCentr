@@ -1167,70 +1167,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.027111435, y: 0.054174855, z: 0.02723502}
   m_Center: {x: 0.000013696353, y: 0.027051494, z: -0.000014133454}
---- !u!1 &954865098
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 954865100}
-  - component: {fileID: 954865099}
-  m_Layer: 0
-  m_Name: NavMesh Surface
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &954865099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 954865098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
-  m_BuildHeightMesh: 0
---- !u!4 &954865100
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 954865098}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.501749, y: 10.888151, z: -2.46}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &992599132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2548,6 +2484,7 @@ GameObject:
   - component: {fileID: 1615221531}
   - component: {fileID: 1615221530}
   - component: {fileID: 1615221532}
+  - component: {fileID: 1615221533}
   m_Layer: 5
   m_Name: moneymanager
   m_TagString: EditorOnly
@@ -2624,6 +2561,19 @@ MonoBehaviour:
   money: {fileID: 992599134}
   moneypersecond: {fileID: 1749269743}
   moneyoutput: {fileID: 1560791242}
+--- !u!114 &1615221533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615221528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8520ca3ac01904e9e1f88677404788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefLarge: {fileID: 4324266511593175046, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
 --- !u!1 &1631993584
 GameObject:
   m_ObjectHideFlags: 0
@@ -3379,11 +3329,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026459999}
   m_CullTransparentMesh: 1
---- !u!1 &2026515076 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784610227419873898, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
-  m_PrefabInstance: {fileID: 12673365523037254}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2070951646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3527,22 +3472,10 @@ PrefabInstance:
       propertyPath: 'ButtonsOrDecor.Array.data[0]'
       value: 
       objectReference: {fileID: 278458200}
-    - target: {fileID: 1784610227419873898, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
-      propertyPath: m_Name
-      value: CubePet
-      objectReference: {fileID: 0}
-    - target: {fileID: 1784610227419873898, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1823284051399255003, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       propertyPath: 'ButtonsOrDecor.Array.data[0]'
       value: 
       objectReference: {fileID: 1146646123}
-    - target: {fileID: 2761973208005991079, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
-      propertyPath: 'magazinetype.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2026515076}
     - target: {fileID: 2761973208005991079, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
       propertyPath: 'Visitmagazine.Array.data[0]'
       value: 
@@ -4511,16 +4444,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6580985544892001011, guid: 207caec094f72794db39bab1b27f5385, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 8926606137665557674, guid: 207caec094f72794db39bab1b27f5385, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 2674884707580455804, guid: 207caec094f72794db39bab1b27f5385, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 207caec094f72794db39bab1b27f5385, type: 3}
 --- !u!1001 &7735908069506946471
 PrefabInstance:
@@ -4986,7 +4910,6 @@ SceneRoots:
   - {fileID: 1558805286}
   - {fileID: 135934197}
   - {fileID: 3031817895966153640}
-  - {fileID: 954865100}
   - {fileID: 66154374}
   - {fileID: 409534906}
   - {fileID: 6968561557938289201}
