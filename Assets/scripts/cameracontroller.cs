@@ -20,7 +20,6 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked; // Блокировка курсора
         currentDistance = distance;
 
         if (target == null)
