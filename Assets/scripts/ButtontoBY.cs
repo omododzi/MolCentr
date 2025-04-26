@@ -103,7 +103,7 @@ public class ButtontoBY : MonoBehaviour
 
             if (Decor != null && CubeDecor != null)
             {
-                Instantiate(Decor,CubeDecor.transform.localPosition,Quaternion.identity);
+                Instantiate(Decor,CubeDecor.transform.position,Quaternion.identity);
             }
             if (floor != null && lvlfloor !=5)
             {

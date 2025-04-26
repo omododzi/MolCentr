@@ -4459,6 +4459,14 @@ PrefabInstance:
       value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: Decor
+      value: 
+      objectReference: {fileID: 5975002271639679170, guid: b559fa8b66374d74e8f80ee6c6079723, type: 3}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: CubeDecor
+      value: 
+      objectReference: {fileID: 38555769413799053}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -4710,6 +4718,14 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: Decor
+      value: 
+      objectReference: {fileID: 7576765874277433283, guid: 4686be0e68db67543bd29453ddbb89fd, type: 3}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: CubeDecor
+      value: 
+      objectReference: {fileID: 3144048441713577974}
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
       value: 0
@@ -5137,6 +5153,14 @@ PrefabInstance:
       value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: Decor
+      value: 
+      objectReference: {fileID: 3176756967634341389, guid: 9c2196645d59ec74081779745cbb8bee, type: 3}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: CubeDecor
+      value: 
+      objectReference: {fileID: 2034603401169703148}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -5456,6 +5480,14 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: Decor
+      value: 
+      objectReference: {fileID: 7576765874277433283, guid: 4686be0e68db67543bd29453ddbb89fd, type: 3}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: CubeDecor
+      value: 
+      objectReference: {fileID: 1147422914154110190}
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
       value: 0
@@ -5863,6 +5895,14 @@ PrefabInstance:
       value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: Decor
+      value: 
+      objectReference: {fileID: 2765798489084193564, guid: 1bc597b28c7ec094ba5b6245d4f2d8a0, type: 3}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: CubeDecor
+      value: 
+      objectReference: {fileID: 7872908370466546885}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -6072,6 +6112,14 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: Decor
+      value: 
+      objectReference: {fileID: 8824901835279739667, guid: bc3863b3a93de984a8321b18057557cf, type: 3}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: CubeDecor
+      value: 
+      objectReference: {fileID: 3373436805553642078}
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
       value: 0
@@ -6327,6 +6375,14 @@ PrefabInstance:
       value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: Decor
+      value: 
+      objectReference: {fileID: 2765798489084193564, guid: 1bc597b28c7ec094ba5b6245d4f2d8a0, type: 3}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: CubeDecor
+      value: 
+      objectReference: {fileID: 7034343277248548157}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -6553,6 +6609,14 @@ PrefabInstance:
       value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: Decor
+      value: 
+      objectReference: {fileID: 2672476318943870557, guid: f8a3d485d7ae76a48be84e34518841e9, type: 3}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: CubeDecor
+      value: 
+      objectReference: {fileID: 7767306430300516309}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -6638,6 +6702,14 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: Decor
+      value: 
+      objectReference: {fileID: 8824901835279739667, guid: bc3863b3a93de984a8321b18057557cf, type: 3}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: CubeDecor
+      value: 
+      objectReference: {fileID: 5761547829378609850}
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
       value: 0
