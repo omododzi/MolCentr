@@ -45,7 +45,7 @@ public class ChangeMagaz : MonoBehaviour
         // Спавним новый объект
         if (spawnPoint != null && prefab != null)
         {
-            Instantiate(prefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
+            Instantiate(prefab, spawnPoint.transform.localPosition, spawnPoint.transform.rotation);
         }
 
         // Уничтожаем ненужные объекты
