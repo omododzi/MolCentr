@@ -95,7 +95,7 @@ public class ButtontoBY : MonoBehaviour
                 {
                     _money.money += pribavka;
                 }
-                Destroy(gameObject,0.3f);
+                Destroy(gameObject,0.1f);
             }
 
             if (Decor != null && CubeDecor != null)
@@ -111,7 +111,7 @@ public class ButtontoBY : MonoBehaviour
                 summbaff += 3;
                 Instantiate(floor, spawnfloor.transform.position, Quaternion.identity);
                 //_spawn.SpawnGuests();
-               Destroy(gameObject,0.3f);
+               Destroy(gameObject,0.1f);
             }
             else if (lvlfloor == 5 && floor != null)
             {
@@ -128,7 +128,7 @@ public class ButtontoBY : MonoBehaviour
                 {
                     _money.money += pribavka;
                 }
-                Destroy(gameObject,0.3f);
+                Destroy(gameObject,0.1f);
             }
         }
     }
