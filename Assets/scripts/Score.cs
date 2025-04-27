@@ -50,5 +50,9 @@ public class Score : MonoBehaviour
       UpdateUI();
    }
 
-  
+   public void MinusMoneyPerSecond()
+   {
+      moneyPerSecond = 1;
+      UpdateUI();
+   }
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UIElements;
 
 public class ChangeMagaz : MonoBehaviour
 {
@@ -16,19 +17,23 @@ public class ChangeMagaz : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.CompareTag("Button"))
+        if (hit.gameObject.CompareTag("Button") )
         {
             _button = hit.gameObject.GetComponent<ButtontoBY>();
-            _button.candestroy = true;
-            if (_button.magazinetype != null)
+            if (Score.summ >= _button.summBY)
             {
-                button = hit.gameObject;
+                _button.candestroy = true;
+                if (_button.magazinetype != null)
+                {
+                    button = hit.gameObject;
+                }
+                
+                if (_button.Visitmagazine != null)
+                {
+                    HandleMagazineActivation();
+                }
             }
             
-            if (_button.Visitmagazine != null)
-            {
-                HandleMagazineActivation();
-            }
         }
     }
     private void HandleMagazineActivation()
@@ -61,45 +66,62 @@ public class ChangeMagaz : MonoBehaviour
     }
     private void ProcessShopType(GameObject prefab, string spawnTag)
     {
-        
-
-        // Сначала находим все объекты для спавна и уничтожения
         List<GameObject> toDestroy = new List<GameObject>();
         GameObject spawnPoint = null;
-        
+    
         foreach (var obj in _button.magazinetype)
         {
             if (obj == null) continue;
 
             if (obj.CompareTag(spawnTag))
             {
-                spawnPoint = obj;
+                spawnPoint = obj; // Запоминаем точку спавна
             }
             else
             {
-                toDestroy.Add(obj);
+                toDestroy.Add(obj); // Добавляем остальные объекты на удаление
             }
         }
         toDestroy.Add(button);
 
-        // Спавним новый объект
+        // Спавним новый объект (если spawnPoint не будет уничтожен)
         if (spawnPoint != null && prefab != null)
         {
-            Instantiate(prefab, spawnPoint.transform.localPosition, spawnPoint.transform.rotation);
+            // Создаем объект
+            var newObj = Instantiate(
+                prefab, 
+                spawnPoint.transform.localPosition, // Используем мировые координаты
+                spawnPoint.transform.rotation,
+                spawnPoint.transform.parent
+            );
+
+            // Получаем текущую позицию
+            Vector3 newPosition = newObj.transform.localPosition;
+
+            // Применяем смещение в зависимости от этажа
+            switch (_button.lvl)
+            {
+                case 2:
+                    newPosition.y += 11.95f;
+                    break;
+                case 3:
+                    newPosition.y += 23.9f;
+                    break;
+                
+                // case 1 не требует изменений
+            }
+
+            // Применяем новую позицию
+            newObj.transform.localPosition = newPosition;
         }
-
-        foreach (var obj in _button.magazinetype)
-        {
-            if (obj == null) continue;
-
-            toDestroy.Add(obj);
-        }
-
         // Уничтожаем ненужные объекты
         foreach (var obj in toDestroy)
         {
             if (obj != null) Destroy(obj);
         }
+
+        // Очищаем списки от null
+        _button.magazinetype.RemoveAll(obj => obj == null);
 
         // Деактивируем Visitmagazine
         if (_button.Visitmagazine != null)
@@ -108,7 +130,7 @@ public class ChangeMagaz : MonoBehaviour
             foreach (var obj in _button.Visitmagazine)
             {
                 if (obj != null) obj.SetActive(false);
-                
+            
                 for (int i = 0; i < cards.Count; i++)
                 {
                     cards[i].SetActive(false);

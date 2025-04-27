@@ -8,6 +8,8 @@ public class Restarting : MonoBehaviour
     private Vector3 _playerStartPosition; // Храним позицию вместо Transform
     private Vector3 _firstLargePosition; // Храним позицию вместо Transform
     private Quaternion _firstLargeRotation; // Храним вращение отдельно
+    private Score _score;
+    
     
     // Магазины будем находить по тегам динамически
     private readonly string[] _magazineTags = {"card sport", "card pet", "card fish", 
@@ -16,6 +18,8 @@ public class Restarting : MonoBehaviour
 
     void Start()
     {
+        
+        _score = gameObject.GetComponent<Score>();
         _player = GameObject.FindGameObjectWithTag("Player");
         if (_player == null) Debug.Log("Player not found!");
         
@@ -32,15 +36,6 @@ public class Restarting : MonoBehaviour
             Debug.Log("Large object not found!");
         }
     }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Restart();
-        }
-    }
-
     public void Restart()
     {
         // Удаляем все объекты с тегом "large"
@@ -58,6 +53,11 @@ public class Restarting : MonoBehaviour
         
         // Возвращаем игрока на стартовую позицию
         _player.transform.position = _playerStartPosition;
+        if (ButtontoBY.lvlfloor <= 5)
+        {
+            _score.MinusMoneyPerSecond();
+            Score.summ = 0;
+        }
         ButtontoBY.lvlfloor = 1;
     }
     
