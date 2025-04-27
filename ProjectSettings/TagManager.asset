@@ -21,6 +21,12 @@ TagManager:
   - Button
   - Cards
   - large
+  - card sport
+  - card pet
+  - card toilet
+  - card cafe
+  - card jewelery
+  - card fish
   layers:
   - Default
   - TransparentFX
@@ -28,13 +34,13 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - cafe
+  - toilet
+  - pet
+  - jewelery
+  - fish
+  - sport
+  - Cards
   - 
   - 
   - 

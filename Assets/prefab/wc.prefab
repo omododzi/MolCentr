@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 2646827905127736458}
   - component: {fileID: 4161146441893289244}
   - component: {fileID: 1798412680780191726}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: wc
   m_TagString: Cards
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3335944318274890198
 RectTransform:
   m_ObjectHideFlags: 0

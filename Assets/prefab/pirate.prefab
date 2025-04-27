@@ -51,7 +51,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: magazinetype.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: 'Preftospawn.Array.data[0]'
@@ -361,7 +365,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
-      value: 3
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: magazinetype.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: 'Preftospawn.Array.data[0]'
@@ -439,7 +447,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: magazinetype.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: 'Preftospawn.Array.data[0]'

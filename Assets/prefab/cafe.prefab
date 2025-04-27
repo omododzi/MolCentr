@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 1922286132057935497}
   - component: {fileID: 2254694059254330225}
   - component: {fileID: 9222398558338047632}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: cafe
   m_TagString: Cards
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7165973532366359534
 RectTransform:
   m_ObjectHideFlags: 0

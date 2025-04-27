@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 3988920521875588227}
   - component: {fileID: 7365647994987294263}
   - component: {fileID: 8434759159473031162}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: pet
   m_TagString: Cards
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2349242221093586326
 RectTransform:
   m_ObjectHideFlags: 0

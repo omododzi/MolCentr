@@ -10,8 +10,9 @@ public class Restarting : MonoBehaviour
     private Quaternion _firstLargeRotation; // Храним вращение отдельно
     
     // Магазины будем находить по тегам динамически
-    private readonly string[] _magazineTags = {"spawn sport", "spawn pet shop", "spawn fish", 
-                                             "spawn baker", "spawn jewelery", "SpawnTilet"};
+    private readonly string[] _magazineTags = {"card sport", "card pet", "card fish", 
+                                             "card cafe", "card jewelery", "card toilet"};
+    
 
     void Start()
     {
@@ -48,6 +49,7 @@ public class Restarting : MonoBehaviour
         // Удаляем все магазины
         foreach (var tag in _magazineTags)
         {
+            Debug.Log(tag);
             DestroyAllWithTag(tag);
         }
         
@@ -56,6 +58,7 @@ public class Restarting : MonoBehaviour
         
         // Возвращаем игрока на стартовую позицию
         _player.transform.position = _playerStartPosition;
+        ButtontoBY.lvlfloor = 1;
     }
     
     // Вспомогательный метод для удаления всех объектов с определенным тегом

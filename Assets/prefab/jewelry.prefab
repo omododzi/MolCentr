@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 334093513088078254}
   - component: {fileID: 2130257243799506375}
   - component: {fileID: 3165083118163241825}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: jewelry
   m_TagString: Cards
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8812069772377488845
 RectTransform:
   m_ObjectHideFlags: 0

@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 2760179329640975962}
   m_Layer: 0
   m_Name: toilet
-  m_TagString: Untagged
+  m_TagString: card toilet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -809,7 +809,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: magazinetype.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: 'Preftospawn.Array.data[0]'
@@ -1035,7 +1039,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: magazinetype.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: 'Preftospawn.Array.data[0]'

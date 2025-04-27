@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 5278371791236817249}
   - component: {fileID: 1622962216436749509}
   - component: {fileID: 4018091959916353833}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: fish
   m_TagString: Cards
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7704725772499725135
 RectTransform:
   m_ObjectHideFlags: 0

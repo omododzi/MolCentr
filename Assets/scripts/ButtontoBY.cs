@@ -2,11 +2,10 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.UI;
 
 public class ButtontoBY : MonoBehaviour
 {
-    
     public List<GameObject> magazinetype;
     public GameObject[] Buttons;
     public GameObject floor;
@@ -28,22 +27,28 @@ public class ButtontoBY : MonoBehaviour
 
     private GameObject player;
 
+    public bool candestroy = false;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         if (lvlfloor == 1)
         {
             summBY = 150;
-        }else if (lvlfloor == 2)
+        }
+        else if (lvlfloor == 2)
         {
             summBY = 300;
-        }else if (lvlfloor == 3)
+        }
+        else if (lvlfloor == 3)
         {
             summBY = 400;
-        }else if (lvlfloor == 4)
+        }
+        else if (lvlfloor == 4)
         {
-            
-        }else if (lvlfloor == 5)
+
+        }
+        else if (lvlfloor == 5)
         {
             summBY = 500;
         }
@@ -52,10 +57,7 @@ public class ButtontoBY : MonoBehaviour
         {
             _money = mycassa.GetComponent<CassaMoney>();
         }
-        else
-        {
-            Debug.Log("pox");
-        }
+
         summBY *= summbaff;
         _spawn = new Spawnguest();
     }
@@ -65,6 +67,7 @@ public class ButtontoBY : MonoBehaviour
         text.text = summBY + "$";
         text.transform.LookAt(player.transform);
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -75,50 +78,44 @@ public class ButtontoBY : MonoBehaviour
                 {
                     magazinetype[i].SetActive(true);
                 }
-                Destroy(gameObject);
+
+                if (candestroy)
+                {
+                    // Удаление объекта через 0.5 секунд
+                }
             }
-            else
-            {
-                Debug.Log("pox");
-            }
+
             if (Buttons != null)
             {
                 for (int i = 0; i < Buttons.Length; i++)
                 {
                     Buttons[i].SetActive(true);
-                   
                 }
                 if (mycassa != null)
                 {
                     _money.money += pribavka;
-                }else
-                {
-                    Debug.Log("pox");
                 }
-                Destroy(gameObject);
-            } else
-            {
-                Debug.Log("pox");
+                Destroy(gameObject,0.3f);
             }
 
             if (Decor != null && CubeDecor != null)
             {
                 CubeDecor.SetActive(true);
-                Instantiate(Decor,CubeDecor.transform.localPosition,Quaternion.identity);
+                Instantiate(Decor, CubeDecor.transform.localPosition, Quaternion.identity);
+                Destroy(gameObject,0.3f);
+
             }
-            if (floor != null && lvlfloor !=5)
+            if (floor != null && lvlfloor != 5)
             {
                 lvlfloor++;
                 summbaff += 3;
                 Instantiate(floor, spawnfloor.transform.position, Quaternion.identity);
                 //_spawn.SpawnGuests();
-                Destroy(gameObject);
-            } else if (lvlfloor == 5 && floor != null)
+               Destroy(gameObject,0.3f);
+            }
+            else if (lvlfloor == 5 && floor != null)
             {
                 Debug.Log("restart");
-            }else if (floor == null)
-            {
-                Debug.Log("pox");
             }
 
             if (Preftospawn != null)
@@ -130,27 +127,9 @@ public class ButtontoBY : MonoBehaviour
                 if (mycassa != null)
                 {
                     _money.money += pribavka;
-                }else
-                {
-                    Debug.Log("pox");
                 }
-                Destroy(gameObject);
-            } else
-            {
-                Debug.Log("pox");
+                Destroy(gameObject,0.3f);
             }
-            if (Visitmagazine != null)
-            {
-                for (int i = 0; i < Visitmagazine.Length; i++)
-                {
-                    Visitmagazine[i].SetActive(true);
-                }
-                Destroy(gameObject);
-            } else
-            {
-                Debug.Log("pox");
-            }
-            
         }
     }
 }
