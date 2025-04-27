@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38555769413799053}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.07009, y: 20.75044, z: -18.68768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.29, y: 1.802851, z: -74.56187}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -713,7 +713,7 @@ Transform:
   m_GameObject: {fileID: 2034603401169703148}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.62906, y: 20.74988, z: -18.75188}
+  m_LocalPosition: {x: 35.11, y: 1.80229, z: -74.12558}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1507,7 +1507,7 @@ Transform:
   m_GameObject: {fileID: 3373436805553642078}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.24847, y: 10.81396, z: -5.857819}
+  m_LocalPosition: {x: -34.31742, y: 1.806746, z: -120.2045}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2194,7 +2194,7 @@ Transform:
   m_GameObject: {fileID: 5761547829378609850}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.24847, y: 10.81396, z: 14.23219}
+  m_LocalPosition: {x: -34.37936, y: 1.806746, z: -100.3857}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3367,6 +3367,7 @@ MonoBehaviour:
   baker: {fileID: 0}
   jewelery: {fileID: 0}
   pomoyka: {fileID: 0}
+  magazines: []
 --- !u!1 &7767306430300516309
 GameObject:
   m_ObjectHideFlags: 0
@@ -3827,7 +3828,7 @@ Transform:
   m_GameObject: {fileID: 8373539267831951071}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.84, y: 9.07419, z: -158.84}
+  m_LocalPosition: {x: 8.13, y: 9.07419, z: -157.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4979,11 +4980,11 @@ PrefabInstance:
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: 'Visitmagazine.Array.data[0]'
       value: 
-      objectReference: {fileID: 1078300771614898634, guid: 0f577096099ad744b891a7be513198b0, type: 3}
+      objectReference: {fileID: 1934400635388866242, guid: 8b31f00ac1d6ba949aa234b2da383c99, type: 3}
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: 'Visitmagazine.Array.data[1]'
       value: 
-      objectReference: {fileID: 1934400635388866242, guid: 8b31f00ac1d6ba949aa234b2da383c99, type: 3}
+      objectReference: {fileID: 1078300771614898634, guid: 0f577096099ad744b891a7be513198b0, type: 3}
     - target: {fileID: 5954344294611546617, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: m_Name
       value: button
@@ -5584,7 +5585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7928398495133974431, guid: 8d3c16af87b75a4419939365eeea68e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 68.38
+      value: 69.06
       objectReference: {fileID: 0}
     - target: {fileID: 7928398495133974431, guid: 8d3c16af87b75a4419939365eeea68e0, type: 3}
       propertyPath: m_LocalPosition.y

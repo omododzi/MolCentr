@@ -29,7 +29,7 @@ public class ButtontoBY : MonoBehaviour
 
     public bool candestroy = false;
 
-    void Start()
+ void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         if (lvlfloor == 1)
@@ -80,7 +80,7 @@ public class ButtontoBY : MonoBehaviour
                 }
 
                 if (candestroy)
-                {
+           {
                     // Удаление объекта через 0.5 секунд
                 }
             }
@@ -95,14 +95,14 @@ public class ButtontoBY : MonoBehaviour
                 {
                     _money.money += pribavka;
                 }
-                Destroy(gameObject,0.1f);
+                Destroy(gameObject);
             }
 
             if (Decor != null && CubeDecor != null)
             {
                 CubeDecor.SetActive(true);
-                Instantiate(Decor, CubeDecor.transform.localPosition, Quaternion.identity);
-                Destroy(gameObject,0.3f);
+                Instantiate(Decor, CubeDecor.transform.localPosition,CubeDecor.transform.rotation);
+                Destroy(gameObject);
 
             }
             if (floor != null && lvlfloor != 5)
@@ -111,7 +111,7 @@ public class ButtontoBY : MonoBehaviour
                 summbaff += 3;
                 Instantiate(floor, spawnfloor.transform.position, Quaternion.identity);
                 //_spawn.SpawnGuests();
-               Destroy(gameObject,0.1f);
+               Destroy(gameObject);
             }
             else if (lvlfloor == 5 && floor != null)
             {
@@ -128,7 +128,7 @@ public class ButtontoBY : MonoBehaviour
                 {
                     _money.money += pribavka;
                 }
-                Destroy(gameObject,0.1f);
+                Destroy(gameObject);
             }
         }
     }
