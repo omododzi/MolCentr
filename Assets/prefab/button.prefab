@@ -26,7 +26,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414549825436493285}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.2422638}
+  m_LocalPosition: {x: 0, y: 0, z: 1.36}
   m_LocalScale: {x: 0.19986, y: 0.3747308, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.38955, y: 2.2477}
+  m_AnchoredPosition: {x: -1.56, y: 1.727}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &7090584388014815690
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 8.532134, w: 0}
+  m_margin: {x: 0, y: 0, z: -19.81858, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -190,15 +190,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c3ccd11fd7b362b4286069a3791e7c5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.1301737
+      value: 6.667864
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c3ccd11fd7b362b4286069a3791e7c5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8040509
+      value: 1.8040504
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c3ccd11fd7b362b4286069a3791e7c5e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -91.93761
+      value: -116.1454
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c3ccd11fd7b362b4286069a3791e7c5e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -276,17 +276,22 @@ MonoBehaviour:
   magazinetype:
   - {fileID: 0}
   - {fileID: 0}
-  ButtonsOrDecor: []
+  Buttons: []
   floor: {fileID: 0}
   spawnfloor: {fileID: 0}
   text: {fileID: 8313061277783440707}
   summBY: 0
   pribavka: 0
+  lvl: 0
+  Decor: {fileID: 0}
+  CubeDecor: {fileID: 0}
+  stair: {fileID: 0}
   mycassa: {fileID: 0}
   Preftospawn: []
   Visitmagazine:
   - {fileID: 0}
   - {fileID: 0}
+  candestroy: 0
 --- !u!54 &606843049874870842
 Rigidbody:
   m_ObjectHideFlags: 0

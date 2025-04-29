@@ -30,6 +30,7 @@ public class ButtontoBY : MonoBehaviour
     private GameObject player;
 
     public bool candestroy = false;
+    public static bool ribild;
 
  void Start()
     {
@@ -41,20 +42,20 @@ public class ButtontoBY : MonoBehaviour
         }
         else if (lvlfloor == 2)
         {
-            summBY = 500;
+            summBY = 5000;
         }
         else if (lvlfloor == 3)
         {
-            summBY = 2000;
+            summBY = 20000;
         }
         else if (lvlfloor == 4)
         {
-            summBY = 4000;
+            summBY = 40000;
 
         }
         else if (lvlfloor == 5)
         {
-            summBY = 6000;
+            summBY = 60000;
         }
 
         if (mycassa != null)
@@ -74,7 +75,7 @@ public class ButtontoBY : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && Score.summ >= summBY)
+        if (other.gameObject.CompareTag("Player") )
         {
             if (magazinetype != null)
             {
@@ -82,15 +83,14 @@ public class ButtontoBY : MonoBehaviour
                 {
                     magazinetype[i].SetActive(true);
                 }
-
                 if (candestroy)
                 {
-                        // Удаление объекта через 0.5 секунд
+                    Score.summ -= summBY;
+                    candestroy = false;
                 }
-                Score.summ -= summBY;
             }
 
-            if (Buttons != null)
+            if (Buttons != null&& Score.summ >= summBY)
             {
                 for (int i = 0; i < Buttons.Length; i++)
                 {
@@ -101,22 +101,32 @@ public class ButtontoBY : MonoBehaviour
                     _money.money += pribavka;
                     _money.Plusmoney();
                 }
-                Score.summ -= summBY;
+                if (candestroy)
+                {
+                    Score.summ -= summBY;
+                    candestroy = false;
+                }
                 Destroy(gameObject);
             }
 
-            if (Decor != null && CubeDecor != null)
+            if (Decor != null && CubeDecor != null&& Score.summ >= summBY)
             {
                 CubeDecor.SetActive(true);
                 Instantiate(Decor, CubeDecor.transform.localPosition,CubeDecor.transform.rotation);
-                Score.summ -= summBY;
+                if (candestroy)
+                {
+                    Score.summ -= summBY;
+                    candestroy = false;
+                }
                 Destroy(gameObject);
 
             }
-            if (floor != null )
+            if (floor != null && Score.summ >= summBY)
             {
                 lvlfloor++;
                 summbaff += 3;
+                Debug.Log(lvlfloor);
+
                 var newObj = Instantiate(floor, spawnfloor.transform.position, Quaternion.identity);
                 Vector3 newPosition = newObj.transform.localPosition;
                 stair.SetActive(true);
@@ -133,15 +143,19 @@ public class ButtontoBY : MonoBehaviour
                 }
                 newObj.transform.localPosition = newPosition;
                 //_spawn.SpawnGuests();
-                Score.summ -= summBY;
+                if (candestroy)
+                {
+                    Score.summ -= summBY;
+                    candestroy = false;
+                }
                Destroy(gameObject);
             }
-            else if (lvlfloor == 5 && floor != null)
+            else if (lvlfloor == 4 && floor != null)
             {
-                Debug.Log("restart");
+                ribild = true;
             }
 
-            if (Preftospawn != null)
+            if (Preftospawn != null&& Score.summ >= summBY)
             {
                 for (int i = 0; i < Preftospawn.Length; i++)
                 {
@@ -152,7 +166,13 @@ public class ButtontoBY : MonoBehaviour
                     _money.money += pribavka;
                     _money.Plusmoney();
                 }
-                Score.summ -= summBY;
+
+                if (candestroy)
+                {
+                    Score.summ -= summBY;
+                    candestroy = false;
+                }
+               
                 Destroy(gameObject);
             }
         }

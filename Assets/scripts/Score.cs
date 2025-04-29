@@ -1,20 +1,22 @@
 using System;
 using UnityEngine;
 using TMPro;
+using YG;
 public class Score : MonoBehaviour
 {
    public TMP_Text money;
    public TMP_Text moneypersecond;
    public TMP_Text moneyoutput;
-    
-   public static int summ = 0; // Инициализируем нулем
-   public static float moneyPerSecond = 1.0f; // Начальное значение (например, 1$ в секунду)
+
+   public static int summ; // Инициализируем нулем
+   public static float moneyPerSecond;// Начальное значение (например, 1$ в секунду)
     
    private float accumulatedTime;
 
    private void Start()
    {
-      // Инициализация UI при старте
+      moneyPerSecond = YandexGame.savesData.moneypersec;
+      summ = YandexGame.savesData.money;
       UpdateUI();
    }
 

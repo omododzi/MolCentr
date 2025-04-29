@@ -138,6 +138,7 @@ public class ChangeMagaz : MonoBehaviour
             }
             cards.Clear();
         }
+        YGadd.TryShowFullscreenAdWithChance(30);
     }
 
     public void Sportshop() => ProcessShopType(sport, "spawn sport");
