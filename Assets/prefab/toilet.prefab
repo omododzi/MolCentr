@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 2948775097329473283}
   - component: {fileID: 2252922168647637158}
   - component: {fileID: 4082244297297538156}
+  - component: {fileID: 3678385719663439321}
   m_Layer: 0
   m_Name: SM_toilet_cubicle (1)
   m_TagString: Untagged
@@ -181,6 +182,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3678385719663439321
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2569294789114006969}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.54185, y: 2.266765, z: 1.5585469}
+  m_Center: {x: 0.6303477, y: 1.1333826, z: -0.77927345}
 --- !u!1 &3173319855837362329
 GameObject:
   m_ObjectHideFlags: 0
