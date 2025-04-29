@@ -27,7 +27,7 @@ public class ButtontoBY : MonoBehaviour
     public GameObject[] Preftospawn;
     public GameObject[] Visitmagazine;
 
-    private GameObject player;
+    private Transform player;
 
     public bool candestroy = false;
     public static bool ribild;
@@ -35,7 +35,7 @@ public class ButtontoBY : MonoBehaviour
  void Start()
     {
         lvl = lvlfloor;
-        player = Camera.main.gameObject;
+        player = Camera.main.transform;
         if (lvlfloor == 1)
         {
             summBY = 3;
@@ -70,7 +70,8 @@ public class ButtontoBY : MonoBehaviour
     void Update()
     {
         text.text = summBY + "$";
-        text.transform.LookAt(player.transform);
+        text.transform.LookAt(player);
+        text.transform.rotation = Quaternion.LookRotation(transform.position - player.position);
     }
 
     private void OnTriggerEnter(Collider other)
