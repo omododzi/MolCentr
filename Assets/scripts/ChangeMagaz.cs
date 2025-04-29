@@ -15,7 +15,7 @@ public class ChangeMagaz : MonoBehaviour
     public List<GameObject>magazines =  new List<GameObject>();
     private GameObject button;
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    private void OnTriggerEnter(Collider  hit)
     {
         if (hit.gameObject.CompareTag("Button") )
         {

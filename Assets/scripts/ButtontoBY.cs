@@ -31,9 +31,16 @@ public class ButtontoBY : MonoBehaviour
 
     public bool candestroy = false;
     public static bool ribild;
+    
+    public Vector3 offsetRotation = Vector3.zero; // Дополнительный поворот, если нужно
+
 
  void Start()
     {
+        if (text == null) text = GetComponent<TMP_Text>();
+        
+        // Сохраняем начальные позицию и поворот
+       
         lvl = lvlfloor;
         player = Camera.main.transform;
         if (lvlfloor == 1)
@@ -70,9 +77,15 @@ public class ButtontoBY : MonoBehaviour
     void Update()
     {
         text.text = summBY + "$";
-        text.transform.LookAt(player);
-        text.transform.rotation = Quaternion.LookRotation(transform.position - player.position);
+      
+        if (ribild)
+        {
+            summBY = 3;
+            summbaff = 1;
+        }
     }
+      
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -124,13 +137,15 @@ public class ButtontoBY : MonoBehaviour
             }
             if (floor != null && Score.summ >= summBY)
             {
+                //floor = Resources.Load<GameObject>("prefab/large");
                 lvlfloor++;
                 summbaff += 3;
-                Debug.Log(lvlfloor);
 
-                var newObj = Instantiate(floor, spawnfloor.transform.position, Quaternion.identity);
-                Vector3 newPosition = newObj.transform.localPosition;
-                stair.SetActive(true);
+                // Создаём новый этаж
+                GameObject newFloor = Instantiate(floor, spawnfloor.transform.position, Quaternion.identity);
+                
+                Vector3 newPosition = newFloor.transform.localPosition;
+                
                 switch (lvl)
                 {
                     case 2:
@@ -142,14 +157,17 @@ public class ButtontoBY : MonoBehaviour
                 
                     // case 1 не требует изменений
                 }
-                newObj.transform.localPosition = newPosition;
-                //_spawn.SpawnGuests();
+                newFloor.transform.localPosition = newPosition;
+                // Лестница
+                stair.SetActive(true);
+
+                // Снимаем деньги и удаляем кнопку
                 if (candestroy)
                 {
                     Score.summ -= summBY;
                     candestroy = false;
                 }
-               Destroy(gameObject);
+                Destroy(gameObject);
             }
             else if (lvlfloor == 4 && floor != null)
             {
