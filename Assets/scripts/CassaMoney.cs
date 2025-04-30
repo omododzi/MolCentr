@@ -11,22 +11,7 @@ public class CassaMoney : MonoBehaviour
     {
         manager = GameObject.FindGameObjectWithTag("EditorOnly");
         score = manager.GetComponent<Score>();
-        if (ButtontoBY.lvlfloor == 1)
-        {
-            money = 10;
-        }else if (ButtontoBY.lvlfloor == 2)
-        {
-            money = 20;
-        }else if (ButtontoBY.lvlfloor == 3)
-        {
-            money = 30;
-        }else if (ButtontoBY.lvlfloor == 4)
-        {
-            money = 40;
-        }else if (ButtontoBY.lvlfloor == 5)
-        {
-            money = 50;
-        }
+        money = ButtontoBY.lvlfloor += 10;
         Plusmoney();
     }
     public void Plusmoney()

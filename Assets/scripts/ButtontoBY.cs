@@ -78,7 +78,7 @@ public class ButtontoBY : MonoBehaviour
     {
         text.text = summBY + "$";
       
-        if (ribild)
+        if (ribild && lvlfloor < 4)
         {
             summBY = 3;
             summbaff = 1;
