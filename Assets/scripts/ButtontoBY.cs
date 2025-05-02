@@ -1,8 +1,6 @@
 using System.Collections.Generic;
-using NUnit.Framework;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class ButtontoBY : MonoBehaviour
 {
@@ -32,37 +30,23 @@ public class ButtontoBY : MonoBehaviour
     public bool candestroy = false;
     public static bool ribild;
     
-    public Vector3 offsetRotation = Vector3.zero; // Дополнительный поворот, если нужно
+    public Vector3 offsetRotation = Vector3.zero;
 
-
- void Start()
+    void Start()
     {
         if (text == null) text = GetComponent<TMP_Text>();
         
-        // Сохраняем начальные позицию и поворот
-       
         lvl = lvlfloor;
         player = Camera.main.transform;
-        if (lvlfloor == 1)
+        
+        // Установка стоимости в зависимости от уровня
+        switch (lvlfloor)
         {
-            summBY = 3;
-        }
-        else if (lvlfloor == 2)
-        {
-            summBY = 5000;
-        }
-        else if (lvlfloor == 3)
-        {
-            summBY = 20000;
-        }
-        else if (lvlfloor == 4)
-        {
-            summBY = 40000;
-
-        }
-        else if (lvlfloor == 5)
-        {
-            summBY = 60000;
+            case 1: summBY = 3; break;
+            case 2: summBY = 5000; break;
+            case 3: summBY = 20000; break;
+            case 4: summBY = 40000; break;
+            case 5: summBY = 60000; break;
         }
 
         if (mycassa != null)
@@ -84,116 +68,79 @@ public class ButtontoBY : MonoBehaviour
             summbaff = 1;
         }
     }
-      
-    
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") )
+        if (!other.gameObject.CompareTag("Player") || Score.summ < summBY)
+            return;
+
+        bool actionPerformed = false;
+
+        // Проверяем и выполняем действия
+        if (magazinetype != null && magazinetype.Count > 0)
         {
-            if (magazinetype != null)
-            {
-                for (int i = 0; i < magazinetype.Count; i++)
-                {
-                    magazinetype[i].SetActive(true);
-                }
-                if (candestroy)
-                {
-                    Score.summ -= summBY;
-                    candestroy = false;
-                }
-            }
+            foreach (var obj in magazinetype) obj.SetActive(true);
+            actionPerformed = true;
+        }
 
-            if (Buttons != null&& Score.summ >= summBY)
+        if (Buttons != null && Buttons.Length > 0)
+        {
+            foreach (var btn in Buttons) btn.SetActive(true);
+            if (_money != null)
             {
-                for (int i = 0; i < Buttons.Length; i++)
-                {
-                    Buttons[i].SetActive(true);
-                }
-                if (mycassa != null)
-                {
-                    _money.money += pribavka;
-                    _money.Plusmoney();
-                }
-                if (candestroy)
-                {
-                    Score.summ -= summBY;
-                    candestroy = false;
-                }
-                Destroy(gameObject);
+                _money.money += pribavka;
+                _money.Plusmoney();
             }
+            actionPerformed = true;
+        }
 
-            if (Decor != null && CubeDecor != null&& Score.summ >= summBY)
-            {
-                CubeDecor.SetActive(true);
-                Instantiate(Decor, CubeDecor.transform.localPosition,CubeDecor.transform.rotation);
-                if (candestroy)
-                {
-                    Score.summ -= summBY;
-                    candestroy = false;
-                }
-                Destroy(gameObject);
+        if (Decor != null && CubeDecor != null)
+        {
+            CubeDecor.SetActive(true);
+            Instantiate(Decor, CubeDecor.transform.localPosition, CubeDecor.transform.rotation);
+            actionPerformed = true;
+        }
 
-            }
-            if (floor != null && Score.summ >= summBY)
+        if (floor != null)
+        {
+            if (lvlfloor < 4)
             {
-                //floor = Resources.Load<GameObject>("prefab/large");
                 lvlfloor++;
                 summbaff += 3;
+                Debug.Log(lvlfloor);
 
-                // Создаём новый этаж
                 GameObject newFloor = Instantiate(floor, spawnfloor.transform.position, Quaternion.identity);
-                
-                Vector3 newPosition = newFloor.transform.localPosition;
-                
-                switch (lvl)
-                {
-                    case 2:
-                        newPosition.y += 11.95f;
-                        break;
-                    case 3:
-                        newPosition.y += 23.9f;
-                        break;
-                
-                    // case 1 не требует изменений
-                }
-                newFloor.transform.localPosition = newPosition;
-                // Лестница
                 stair.SetActive(true);
-
-                // Снимаем деньги и удаляем кнопку
-                if (candestroy)
-                {
-                    Score.summ -= summBY;
-                    candestroy = false;
-                }
-                Destroy(gameObject);
+                actionPerformed = true;
             }
-            else if (lvlfloor == 4 && floor != null)
+            else if (lvlfloor == 4)
             {
                 ribild = true;
             }
+        }
 
-            if (Preftospawn != null&& Score.summ >= summBY)
+        if (Preftospawn != null && Preftospawn.Length > 0)
+        {
+            foreach (var prefab in Preftospawn) prefab.SetActive(true);
+            if (_money != null)
             {
-                for (int i = 0; i < Preftospawn.Length; i++)
-                {
-                    Preftospawn[i].SetActive(true);
-                }
-                if (mycassa != null)
-                {
-                    _money.money += pribavka;
-                    _money.Plusmoney();
-                }
-
-                if (candestroy)
-                {
-                    Score.summ -= summBY;
-                    candestroy = false;
-                }
-               
-                Destroy(gameObject);
+                _money.money += pribavka;
+                _money.Plusmoney();
             }
+            actionPerformed = true;
+        }
+
+        // Если действие выполнено, снимаем деньги и уничтожаем объект
+        if (actionPerformed)
+        {
+            Score.summ -= summBY;
+            Destroy(gameObject);
+        }
+        else if (candestroy)
+        {
+            // Только если candestroy = true, но действие не выполнено
+            Score.summ -= summBY;
+            candestroy = false;
         }
     }
 }

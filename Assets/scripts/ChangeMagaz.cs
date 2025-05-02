@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 public class ChangeMagaz : MonoBehaviour
 {
@@ -15,6 +17,11 @@ public class ChangeMagaz : MonoBehaviour
     public List<GameObject>magazines =  new List<GameObject>();
     private GameObject button;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     private void OnTriggerEnter(Collider  hit)
     {
         if (hit.gameObject.CompareTag("Button") )
@@ -26,6 +33,7 @@ public class ChangeMagaz : MonoBehaviour
                 if (_button.magazinetype != null)
                 {
                     button = hit.gameObject;
+                    Cursor.lockState = CursorLockMode.None;
                 }
                 
                 if (_button.Visitmagazine != null)
@@ -139,6 +147,7 @@ public class ChangeMagaz : MonoBehaviour
             cards.Clear();
         }
         YGadd.TryShowFullscreenAdWithChance(30);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void Sportshop() => ProcessShopType(sport, "spawn sport");

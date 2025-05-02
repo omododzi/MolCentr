@@ -6,9 +6,11 @@ public class CassaMoney : MonoBehaviour
     private float timer;
     private GameObject manager;
     private Score score;
+  
 
     void Start()
     {
+        
         manager = GameObject.FindGameObjectWithTag("EditorOnly");
         score = manager.GetComponent<Score>();
         money = ButtontoBY.lvlfloor += 10;

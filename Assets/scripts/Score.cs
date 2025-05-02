@@ -12,9 +12,10 @@ public class Score : MonoBehaviour
    public static float moneyPerSecond;// Начальное значение (например, 1$ в секунду)
     
    private float accumulatedTime;
-
+   public GameObject image;
    private void Start()
    {
+      image.SetActive(true);
       moneyPerSecond = YandexGame.savesData.moneypersec;
       summ = YandexGame.savesData.money;
       UpdateUI();
