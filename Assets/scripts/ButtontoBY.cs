@@ -97,7 +97,7 @@ public class ButtontoBY : MonoBehaviour
         if (Decor != null && CubeDecor != null)
         {
             CubeDecor.SetActive(true);
-            Instantiate(Decor, CubeDecor.transform.localPosition, CubeDecor.transform.rotation);
+            GameObject NewObj =Instantiate(Decor, CubeDecor.transform.localPosition, CubeDecor.transform.rotation);
             actionPerformed = true;
         }
 

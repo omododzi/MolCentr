@@ -17,8 +17,8 @@ public class CameraController : MonoBehaviour
     private float xRotation = 0f;
     private float yRotation = 0f;
     private float currentDistance;
-
-    void Start()
+    public GameObject image;
+    private void Start()
     {
         currentDistance = distance;
 
