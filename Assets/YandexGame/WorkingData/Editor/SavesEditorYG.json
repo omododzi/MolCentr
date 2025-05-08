@@ -1,34 +1,57 @@
 {
-    "idSave": 2,
+    "idSave": 738,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
-    "money": 58,
-    "moneypersec": 13.0,
-    "Floors": [
+    "money": 3636964,
+    "moneypersec": 5970.0,
+    "objectPrefabNames": [
+        "button",
+        "button (3)"
+    ],
+    "objectPositions": [
         {
-            "instanceID": 87000
+            "x": 16.49445152282715,
+            "y": 1.6599998474121094,
+            "z": -142.1504669189453
         },
         {
-            "instanceID": -39874
+            "x": -25.515548706054689,
+            "y": 1.7199993133544922,
+            "z": -84.12246704101563
         }
     ],
-    "FloorPositions": [
+    "objectRotations": [
         {
-            "x": -4.862893581390381,
-            "y": -18.450000762939454,
-            "z": -91.29000091552735
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
         },
         {
-            "x": -4.862893581390381,
-            "y": -6.574968338012695,
-            "z": -91.29000091552735
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
         }
+    ],
+    "objectStates": [
+        true,
+        true
+    ],
+    "objectTags": [
+        "Saveable",
+        "Saveable"
     ],
     "newPlayerName": "Hello!",
     "openLevels": [
         false,
         true,
         false
-    ]
+    ],
+    "customData": {
+        "savedLvlfloor": 1,
+        "savedSummbaff": 1,
+        "savedRibild": false
+    }
 }

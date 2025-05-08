@@ -24,7 +24,7 @@ public class ChangeMagaz : MonoBehaviour
 
     private void OnTriggerEnter(Collider  hit)
     {
-        if (hit.gameObject.CompareTag("Button") )
+        if (hit.gameObject.CompareTag("Saveable") )
         {
             _button = hit.gameObject.GetComponent<ButtontoBY>();
             if (Score.summ >= _button.summBY)
@@ -105,6 +105,7 @@ public class ChangeMagaz : MonoBehaviour
 
             // Получаем текущую позицию
             Vector3 newPosition = newObj.transform.localPosition;
+            conrollersavees.Instance.RegisterNewObject(newObj);
 
             // Применяем смещение в зависимости от этажа
             switch (_button.lvl)

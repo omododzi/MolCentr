@@ -1,69 +1,98 @@
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using TMPro;
-using YG;
+using System.Collections.Generic;
 
 public class ButtontoBY : MonoBehaviour
 {
+    [Header("References")]
     public List<GameObject> magazinetype;
     public GameObject[] Buttons;
     public GameObject floor;
     public GameObject spawnfloor;
     public TMP_Text text;
-    public int summBY = 1;
-    public int pribavka = 5;
-    public static int lvlfloor = 1;
-    public int lvl;
-    public static int summbaff = 1;
     public GameObject Decor;
     public GameObject CubeDecor;
     public GameObject stair;
-
     public GameObject mycassa;
-
     public GameObject[] Preftospawn;
     public GameObject[] Visitmagazine;
 
-    private Transform player;
-
-    public bool candestroy = false;
+    [Header("Settings")]
+    public int summBY = 1;
+    public int pribavka = 5;
+    public Vector3 offsetRotation = Vector3.zero;
+    
+    public static int lvlfloor = 1;
+    public static int summbaff = 1;
     public static bool ribild;
     
-    public Vector3 offsetRotation = Vector3.zero;
+    private Transform player;
     private GameObject manager;
     private Score score;
-    
     private bool actionPerformed = false;
     private bool canAction = false;
-  
+    public int lvl;
+    public bool candestroy = false;
 
-    void Start()
+    private void Awake()
     {
-        manager = GameObject.FindGameObjectWithTag("moneymanager");
-        score = manager.GetComponent<Score>();
-        if (text == null) text = GetComponent<TMP_Text>();
-        
-        lvl = lvlfloor;
-        player = Camera.main.transform;
-        
-        // Установка стоимости в зависимости от уровня
-        switch (lvlfloor)
+        gameObject.tag = "Saveable";
+        StartCoroutine(Initialize());
+    }
+
+    private IEnumerator Initialize()
+    {
+        // Ждем инициализации системы сохранений
+        while (conrollersavees.Instance == null)
+            yield return null;
+
+        // Проверяем состояние объекта
+        if (conrollersavees.Instance.IsObjectUsed(gameObject))
         {
-            case 1: summBY = 3; break;
-            case 2: summBY = 5000; break;
-            case 3: summBY = 20000; break;
-            case 4: summBY = 40000; break;
-            case 5: summBY = 60000; break;
+            SetUsedState();
+            yield break;
         }
 
-       
+        // Регистрируем объект
+        if (!conrollersavees.Instance.IsObjectRegistered(gameObject))
+            conrollersavees.Instance.RegisterNewObject(gameObject);
 
+        // Инициализация остальных компонентов
+        manager = GameObject.FindGameObjectWithTag("moneymanager");
+        score = manager.GetComponent<Score>();
+        text = text ?? GetComponent<TMP_Text>();
+        player = Camera.main.transform;
+        
+        UpdatePrice();
         summBY *= summbaff;
+    }
+
+    private void SetUsedState()
+    {
+        GetComponent<Collider>().enabled = false;
+        GetComponent<Renderer>().enabled = false;
+        enabled = false;
+    }
+
+    private void UpdatePrice()
+    {
+        summBY = lvlfloor switch
+        {
+            1 => 3,
+            2 => 5000,
+            3 => 20000,
+            4 => 40000,
+            5 => 60000,
+            _ => summBY
+        };
     }
 
     void Update()
     {
-        text.text = summBY + "$";
+        if (!enabled) return;
+        
+        text.text = $"{summBY}$";
       
         if (ribild && lvlfloor < 4)
         {
@@ -72,81 +101,78 @@ public class ButtontoBY : MonoBehaviour
         }
 
         if (canAction)
+            PerformActions();
+    }
+
+    private void PerformActions()
+    {
+        if (actionPerformed) return;
+
+        bool anyAction = false;
+        
+        if (magazinetype != null && magazinetype.Count > 0)
         {
-            if (magazinetype != null && magazinetype.Count > 0)
-            {
-                foreach (var obj in magazinetype) obj.SetActive(true);
-                actionPerformed = true;
-            }
+            magazinetype.ForEach(obj => obj.SetActive(true));
+            anyAction = true;
+        }
     
-            if (Buttons != null && Buttons.Length > 0)
-            {
-                foreach (var btn in Buttons) btn.SetActive(true);
-                
-                actionPerformed = true;
-            }
+        if (Buttons != null && Buttons.Length > 0)
+        {
+            System.Array.ForEach(Buttons, btn => btn.SetActive(true));
+            anyAction = true;
+        }
     
-            if (Decor != null && CubeDecor != null)
-            {
-                CubeDecor.SetActive(true);
-                GameObject NewObj =Instantiate(Decor, CubeDecor.transform.localPosition, CubeDecor.transform.rotation);
-                score.UpdateMoneyPerSecond(8);
-                actionPerformed = true;
-            }
+        if (Decor != null && CubeDecor != null)
+        {
+            CubeDecor.SetActive(true);
+            GameObject newObj = Instantiate(Decor, CubeDecor.transform.position, CubeDecor.transform.rotation);
+            newObj.name = Decor.name;
+            conrollersavees.Instance.RegisterNewObject(newObj);
+            score.UpdateMoneyPerSecond(8);
+            anyAction = true;
+        }
     
-            if (floor != null)
-            {
-                if (lvlfloor < 4)
-                {
-                    lvlfloor++;
-                    summbaff += 3;
-                    Debug.Log(lvlfloor);
+        if (floor != null && lvlfloor < 4)
+        {
+            lvlfloor++;
+            summbaff += 3;
+            GameObject newFloor = Instantiate(floor, spawnfloor.transform.position, Quaternion.identity);
+            conrollersavees.Instance.RegisterNewObject(newFloor);
+            stair.SetActive(true);
+            anyAction = true;
+        }
+        else if (floor != null && lvlfloor == 4)
+        {
+            ribild = true;
+        }
     
-                    GameObject newFloor = Instantiate(floor, spawnfloor.transform.position, Quaternion.identity);
-                    //Save(newFloor,newFloor.transform.position);
-                    stair.SetActive(true);
-                    //Save(stair,stair.transform.position);
-                    actionPerformed = true;
-                }
-                else if (lvlfloor == 4)
-                {
-                    ribild = true;
-                }
-            }
-    
-            if (Preftospawn != null && Preftospawn.Length > 0)
-            {
-                foreach (var prefab in Preftospawn) prefab.SetActive(true);
-                score.UpdateMoneyPerSecond(8);
-                actionPerformed = true;
-            }
-    
-            // Если действие выполнено, снимаем деньги и уничтожаем объект
-            if (actionPerformed)
-            {
-                Score.summ -= summBY;
-                canAction = false;
-                Destroy(gameObject);
-            }
-            else if (candestroy)
-            {
-                // Только если candestroy = true, но действие не выполнено
-                Score.summ -= summBY;
-                candestroy = false;
-            }
+        if (Preftospawn != null && Preftospawn.Length > 0)
+        {
+            System.Array.ForEach(Preftospawn, prefab => prefab.SetActive(true));
+            score.UpdateMoneyPerSecond(8);
+            anyAction = true;
+        }
+
+        if (anyAction)
+        {
+            actionPerformed = true;
+            Score.summ -= summBY;
+            canAction = false;
+            SetUsedState();
+            conrollersavees.Instance.RefreshObjectStates();
+        }
+        else if (candestroy)
+        {
+            Score.summ -= summBY;
+            candestroy = false;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.CompareTag("Player") || Score.summ < summBY)
+        if (!other.CompareTag("Player") || Score.summ < summBY || !enabled)
             return;
 
-        bool actionPerformed = false;
-
-       canAction = true;
-       
+        canAction = true;
     }
-
-  
 }

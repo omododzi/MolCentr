@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 90ca7c4cd8c12094cbe5a4267f89b55b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.83
+      value: 10.703179
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 90ca7c4cd8c12094cbe5a4267f89b55b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 90ca7c4cd8c12094cbe5a4267f89b55b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -88.19
+      value: -99.24475
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 90ca7c4cd8c12094cbe5a4267f89b55b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 90ca7c4cd8c12094cbe5a4267f89b55b, type: 3}
       propertyPath: m_Name
       value: spawn1button
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 90ca7c4cd8c12094cbe5a4267f89b55b, type: 3}
+      propertyPath: m_TagString
+      value: Saveable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -86,10 +90,14 @@ MonoBehaviour:
   text: {fileID: 0}
   summBY: 0
   pribavka: 0
+  lvl: 0
   Decor: {fileID: 0}
   CubeDecor: {fileID: 0}
+  stair: {fileID: 0}
   mycassa: {fileID: 0}
   Preftospawn: []
   Visitmagazine:
   - {fileID: 5366037981432847389, guid: f0acfd0aabb8b4842a49b2d29b9ce793, type: 3}
   - {fileID: 6685191204157398846, guid: e2bed7bc5bf21f5408a6606878e0f3ae, type: 3}
+  candestroy: 0
+  offsetRotation: {x: 0, y: 0, z: 0}

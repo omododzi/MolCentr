@@ -1199,18 +1199,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccbbc04010aa2694b9f743ee2c4249e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guests:
-  - {fileID: 8916732273523229757, guid: 2d8f6bc93b3f9d345b5f3b1edb24b2f7, type: 3}
-  - {fileID: 7463508208625356124, guid: 0dfb91f517c292d49be7df146ad200ad, type: 3}
-  - {fileID: 3953223431563011752, guid: 55a2a30f48a8e6d47927c7391b47ef65, type: 3}
-  - {fileID: 2016036634914480474, guid: b912f7c02546b994b940898b17178b8b, type: 3}
-  - {fileID: 3020919377155868420, guid: ffe4847ae8e0ca1489eaf01bf39f0de9, type: 3}
-  - {fileID: 5444639423692664270, guid: 94b1989c4a2793243bb457fa515b4e61, type: 3}
-  - {fileID: 569859581733943510, guid: cc2a80c0398894702942d128ccca1dc1, type: 3}
-  - {fileID: 3626430853438140692, guid: 087c658005d534e9d820022711ea696d, type: 3}
-  spawnPoints: []
-  scoreguests: 1
-  numfloor: 0
 --- !u!4 &1368549740
 Transform:
   m_ObjectHideFlags: 0
@@ -2004,6 +1992,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30d99a6530190e4d9ad751f131095e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectPrefabs:
+  - {fileID: 4324266511593175046, guid: 75b49e8dd0919f64caa1ec676e2a94c2, type: 3}
+  - {fileID: 7052238874917208932, guid: d0e776f77fa15e149b29dc333bbf4555, type: 3}
+  - {fileID: 6050778288129844879, guid: bc191bca76bf7994e935f089660b3acd, type: 3}
+  - {fileID: 7341130368197020095, guid: 207caec094f72794db39bab1b27f5385, type: 3}
+  - {fileID: 5601310330118351209, guid: 753a4742d6f86fa449bace0b99e54144, type: 3}
+  - {fileID: 8706730481147312939, guid: 19636bfb38b11d4469de10acfb62ac9a, type: 3}
+  - {fileID: 576777898982079497, guid: 9f543d255ffd81345a7d485e0bcd084a, type: 3}
+  - {fileID: 5226102647784351887, guid: 47e4d90014ba6234bbc7aa96317ac277, type: 3}
+  - {fileID: 6864468070278523895, guid: 2e85d7446665a4341aa1179dec78a3d3, type: 3}
+  - {fileID: 7576765874277433283, guid: 4686be0e68db67543bd29453ddbb89fd, type: 3}
+  - {fileID: 2765798489084193564, guid: 1bc597b28c7ec094ba5b6245d4f2d8a0, type: 3}
+  - {fileID: 5975002271639679170, guid: b559fa8b66374d74e8f80ee6c6079723, type: 3}
+  - {fileID: 3176756967634341389, guid: 9c2196645d59ec74081779745cbb8bee, type: 3}
+  - {fileID: 1123370084124222421, guid: c9742c2739f69874f94a5b458d29d8ee, type: 3}
+  objectTags:
+  - Saveable
+  - Button
 --- !u!65 &1964602099
 BoxCollider:
   m_ObjectHideFlags: 0

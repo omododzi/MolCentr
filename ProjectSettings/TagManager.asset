@@ -28,6 +28,7 @@ TagManager:
   - card jewelery
   - card fish
   - moneymanager
+  - Saveable
   layers:
   - Default
   - TransparentFX
