@@ -6,8 +6,8 @@ public class Score : MonoBehaviour
 {
     public TMP_Text money;
     public TMP_Text moneypersecond;
-    public static int summ = 0; // Инициализация на случай отсутствия savesData
-    public static float moneyPerSecond = 1.0f; // Значение по умолчанию
+    public static int summ; // Инициализация на случай отсутствия savesData
+    public static float moneyPerSecond ; // Значение по умолчанию
     
     private float accumulatedTime;
     public GameObject image;
@@ -21,14 +21,6 @@ public class Score : MonoBehaviour
 
     private void Start()
     {
-        // Проверяем, есть ли image (чтобы не было NullReferenceException)
-        if (image != null)
-        {
-            image.SetActive(true);
-            var imagescript1 = image.GetComponent<Score>();
-            if (imagescript1 != null) imagescript1.enabled = true;
-        }
-
         // Загружаем данные из Яндекс Игр (с проверкой на null)
         if (YandexGame.savesData != null)
         {
@@ -40,6 +32,15 @@ public class Score : MonoBehaviour
             Debug.LogWarning("YandexGame.savesData == null! Используются значения по умолчанию.");
         }
 
+        // Проверяем, есть ли image (чтобы не было NullReferenceException)
+        if (image != null)
+        {
+            image.SetActive(true);
+            var imagescript1 = image.GetComponent<Score>();
+            if (imagescript1 != null) imagescript1.enabled = true;
+        }
+
+     
         UpdateUI();
     }
 
@@ -52,6 +53,8 @@ public class Score : MonoBehaviour
             UpdateUI();
         }
         accumulatedTime += Time.deltaTime;
+        YandexGame.savesData.moneypersec = moneyPerSecond;
+        YandexGame.savesData.money = summ;
     }
 
     private void UpdateUI()

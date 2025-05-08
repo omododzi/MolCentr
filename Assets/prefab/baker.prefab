@@ -123,6 +123,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 5031196504061750298}
     m_Modifications:
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: summBY
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1281,6 +1285,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 5031196504061750298}
     m_Modifications:
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: summBY
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -2071,6 +2079,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5031196504061750298}
     m_Modifications:
+    - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
+      propertyPath: summBY
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1072934318171861940, guid: 415e84c64bfee3f44bcc07bd24e427fb, type: 3}
       propertyPath: Preftospawn.Array.size
       value: 1

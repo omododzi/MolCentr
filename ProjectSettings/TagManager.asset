@@ -27,6 +27,7 @@ TagManager:
   - card cafe
   - card jewelery
   - card fish
+  - moneymanager
   layers:
   - Default
   - TransparentFX

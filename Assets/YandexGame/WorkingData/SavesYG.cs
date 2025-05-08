@@ -1,4 +1,8 @@
 ﻿
+using System.Collections.Generic;
+using NUnit.Framework;
+using UnityEngine;
+
 namespace YG
 {
     [System.Serializable]
@@ -13,7 +17,9 @@ namespace YG
         // Тестовые сохранения для демо сцены
         // Можно удалить этот код, но тогда удалите и демо (папка Example)
         public int money = 1;
-        public int moneypersec = 1;// Можно задать полям значения по умолчанию
+        public float moneypersec = 1;
+        public List<GameObject> objectsonscenes = new List<GameObject>();
+        public List<Vector3> posobjects = new List<Vector3>();
         public string newPlayerName = "Hello!";
         public bool[] openLevels = new bool[3];
 
@@ -24,7 +30,7 @@ namespace YG
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 
 
-        // Вы можете выполнить какие то действия при загрузке сохранений
+        // Вы можете выполнить какие-то действия при загрузке сохранений
         public SavesYG()
         {
             // Допустим, задать значения по умолчанию для отдельных элементов массива
